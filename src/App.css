@@ -22,7 +22,6 @@
   box-sizing: border-box;
   background-color: var(--main-bg-color);
   font-family: var(--font-text);
-  overflow-x: hidden;
 }
 
 h1, h2 {
@@ -105,6 +104,11 @@ section {
 .margin0r1r {
   margin: 0 1rem;
 }
+
+main, main * {
+  overflow: hidden;
+}
+
 /********************************************************************* NAV *********************************************************************/ 
 
 .openBurger {
@@ -152,10 +156,6 @@ button.croix {
   padding: 0.5rem;
 }
 
-.padding-header {
-  padding: 0.5rem;
-}
-
 .burger {
 height: 2rem;
 }
@@ -168,41 +168,6 @@ height: 2rem;
 .main_container {
   padding: 1rem 3rem;
 }
-
-/************* LANDING IMAGE *************/
-.landing_page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 90vh;
-  margin: 1rem 0 2rem;
-}
-.landing_page h1 {
-  font-size: 2.5rem;
-  text-align: center;
-}
-.landing_page h1, .landing_page h2 {
-  background-color: transparent;
-  padding: 0.5rem 2rem;
-  z-index: 1;
-  margin: 0;
-  color: var(--main-bg-color);
-}
-
-  .background_img {
-    position: absolute;
-    background-position: 50%;
-    min-width: 100%;
-    height: 100%;
-  }
-  .veil {
-    position: absolute;
-    background-color: var(--secondary-bg-color);
-    width: 100%;
-    height: 100%;
-    opacity: 60%;
-  }
 
 
 /********************************************************************* Page 1 *********************************************************************/ 
@@ -298,15 +263,88 @@ width: 90%;
   .desktop {
     display: initial;
   }
-
+* {
+    overflow-x: hidden;
+  }
 /********************************************************************* NAVBAR *********************************************************************/ 
-.navbar {
-  padding: 2rem 0;
+header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem;
+  height: fit-content;
+}
 
+.logo {
+  height: 6rem;
+}
+.navbar {
+  padding: 2rem;
 }
 
 .navbar * {
   padding: 0rem 2rem;
 }
-  
+
+.landing {
+  height: 60vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 2rem;
+}
+
+.landing div {
+  height: 80%;
+  width: 20%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.landing div p {
+  margin: 0.5rem 0 1.5rem;
+}
+
+.alice-carousel, .alice-carousel * {
+  overflow: visible;
+}
+
+.background1 {
+  background-image: url(https://images.pexels.com/photos/264480/pexels-photo-264480.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+}
+
+.background2 {
+  background-image: url(https://images.pexels.com/photos/2228555/pexels-photo-2228555.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+}
+
+.background3 {
+  background-image: url(https://grimoire-numerique.re/assets/terry_grimoire.c454a861.jpg);
+}
+
+.alice-carousel__dots {
+  position: absolute;
+  bottom: 0rem;
+  left: 50%;
+  background-color: transparent;
+
+}
+.alice-carousel__dots-item {
+
+  transform: scale(2);
+  background: grey !important;
+
+}
+
+.alice-carousel__dots-item.__active {
+  background: #ffffff !important;
+  border: #191919 solid 1px;
+}
+
 }
