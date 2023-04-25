@@ -4,6 +4,7 @@ import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 
 import itemData from "../data/itemData";
+import logo from "../assets/logo.png";
 
 export default function Home({ helmet }) {
   useEffect(() => {
@@ -36,6 +37,21 @@ export default function Home({ helmet }) {
         infinite
         disableButtonsControls
       />
+      <section className="flex align-center justify-center">
+        <img src={logo} alt="logo Rouge Bakoly B et K à coté" />
+        <div>
+          <h1>Bienvenue chez Rouge Bakoly</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+            consequatur fuga officia architecto illo earum cum alias incidunt
+            sed? Illum iste obcaecati error nostrum numquam facilis! Recusandae
+            exercitationem id dolores.
+          </p>
+          <button type="button" className="button-style">
+            Découvrir la compagnie
+          </button>
+        </div>
+      </section>
     </main>
   );
 }
