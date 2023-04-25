@@ -8,7 +8,7 @@ function Tarifs({ helmet }) {
   return (
     <div>
       <Helmet>
-        <title> {helmet.title} | Tarifs </title>
+        <title> {helmet.title} | Pluridisciplinarité </title>
         <link rel="canonical" href={`${helmet.href}/Tarifs`} />
         <meta name="description" content={helmet.description} />
       </Helmet>

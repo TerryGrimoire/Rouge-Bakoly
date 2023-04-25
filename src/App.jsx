@@ -3,8 +3,10 @@ import { HelmetProvider } from "react-helmet-async";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home";
-import Services from "./pages/Services";
-import Tarifs from "./pages/Tarifs";
+import Compagnie from "./pages/Compagnie";
+import Spectacles from "./pages/Spectacles";
+import Residences from "./pages/Residences";
+import Pluridisciplinarite from "./pages/Pluridisciplinarite";
 import Contact from "./pages/Contact";
 import Mentions from "./pages/Mentions";
 
@@ -12,8 +14,8 @@ import "./App.css";
 
 function App() {
   const helmet = {
-    title: "Change Title",
-    href: "https://changehref.com",
+    title: "Rouge Bakoly",
+    href: "https://rougebakoly.re",
     description: "Change description",
   };
   return (
@@ -22,8 +24,10 @@ function App() {
         <Header helmet={helmet} />
         <Routes>
           <Route path="/" element={<Home helmet={helmet} />} />
-          <Route path="/Services" element={<Services helmet={helmet} />} />
-          <Route path="/Tarifs" element={<Tarifs helmet={helmet} />} />
+          <Route path="/Compagnie" element={<Compagnie helmet={helmet} />} />
+          <Route path="/Spectacles" element={<Spectacles helmet={helmet} />} />
+          <Route path="/Residences" element={<Residences helmet={helmet} />} />
+          <Route path="/Pluridisciplinarite" element={<Pluridisciplinarite helmet={helmet} />} />
           <Route path="/Contact" element={<Contact helmet={helmet} />} />
           <Route path="/Mentions" element={<Mentions />} />
         </Routes>
