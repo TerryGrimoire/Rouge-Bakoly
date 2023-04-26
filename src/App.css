@@ -28,6 +28,7 @@ h1, h2 {
   font-family: var(--font-title);
 }
 
+
 a {
   color: initial;
   text-decoration: none;
@@ -91,8 +92,7 @@ section {
 }
 
 .button_style {
-  border: none;
-  box-shadow: var(--box-shadow);
+  border: 1px solid black;
   padding: 1rem;
   border-radius: 0.75rem;
   font-weight: bold;
@@ -109,6 +109,23 @@ main, main * {
   overflow: hidden;
 }
 
+.grey, .grey * {
+  background-color:#EDEDED;
+}
+.darkGrey, .darkGrey * {
+  background-color:#4a2e2e;
+  color: white;
+}
+.darkGrey button {
+  border: white 1px solid;
+}
+.white, .white * {
+  background-color: white;
+}
+
+h2 {
+  font-size: 3rem;
+}
 /********************************************************************* NAV *********************************************************************/ 
 
 .openBurger {
@@ -163,6 +180,7 @@ height: 2rem;
 .logo {
   height: 4rem;
 }
+
 
 /********************************************************************* HOME *********************************************************************/ 
 .main_container {
@@ -286,6 +304,9 @@ header {
   padding: 0rem 2rem;
 }
 
+/********************************************************************* HOME *********************************************************************/ 
+
+
 .landing {
   height: 70vh;
   display: flex;
@@ -317,15 +338,15 @@ header {
 }
 
 .background1 {
-  background-image: url(https://images.pexels.com/photos/264480/pexels-photo-264480.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-image: url(./assets/random.JPG);
 }
 
 .background2 {
-  background-image: url(https://images.pexels.com/photos/2228555/pexels-photo-2228555.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+  background-image: url(./assets/random.JPG);
 }
 
 .background3 {
-  background-image: url(https://grimoire-numerique.re/assets/terry_grimoire.c454a861.jpg);
+  background-image: url(./assets/random.JPG);
 }
 
 .alice-carousel__dots {
@@ -347,4 +368,175 @@ header {
   border: #191919 solid 1px;
 }
 
+
+.welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 2rem;
+  border-bottom: lightgray 1px solid;
+}
+
+.welcome div {
+  padding: 0 3rem;
+  max-width: 50%;
+}
+
+.welcome h1 {
+  font-size: 3rem;
+}
+
+.welcome div p {
+  margin-bottom: 1rem;
+}
+.derniere_creation {
+ padding: 3rem 1rem;
+}
+
+.derniere_creation h2 {
+  margin: 0 0 2rem;
+  text-align: center;
+}
+ h3 {
+  font-size: 2rem;
+}
+.derniere_creation > div > * {
+  width: 50%;
+}
+.derniere_creation > div {
+  display: flex;
+  justify-content: center;
+}
+.derniere_creation > div > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border: rgb(179, 160, 160) solid 1px;
+}
+
+.derniere_creation > div > div p{
+  margin: 2rem 0;
+  text-align: center;
+}
+.actualite {
+  margin: 2rem 1rem;
+}
+.actualite > h2 {
+  padding-left: 1rem;
+}
+.actualite > div:first-of-type {
+  display: flex;
+  padding: 2rem 1rem;
+  border-bottom: black solid 1px;
+}
+.actualite > div > div {
+  padding: 1em 0;
+}
+
+.actualite > div > .actualite_spectacle {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 60%;
+  border: #0055FF 1px solid;
+  position: relative;
+}
+
+.actualite > div > .newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+}
+.actualite div img {
+  width: 25%;
+  height: 100%;
+  margin-right: 1rem;
+}
+
+.actualite div article {
+  max-width: 70%;
+  height: 100%;
+}
+
+.actualite div article p {
+  margin-bottom: 2rem;
+}
+.actualite  .buttons_container {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 1rem;
+}
+.actualite  .buttons_container * {
+  border: none;
+  margin: 0 1rem;
+}
+.actualite h3 {
+  margin-bottom: 0.5rem;
+}
+.actualite .reseaux_sociaux {
+  text-align: center;
+  padding: 2rem 0 0;
+}
+.actualite .reseaux_sociaux div {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.actualite .reseaux_sociaux img {
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+  border-radius: 50%;
+  border: solid grey 2px;
+}
+.aussis {
+  text-align: center;
+}
+.aussi_container {
+  padding: 1rem 10vw;
+}
+
+.aussi {
+  display: flex;
+}
+.aussi:nth-of-type(2n) {
+  flex-direction: row-reverse;
+}
+
+.aussi > * {
+  width: 50%;
+}
+
+.aussi > img {
+  height: 30vw;
+}
+
+.aussi article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.aussi article p {
+  margin: 2rem;
+  padding: 0 2rem;
+}
+
+.soutenir {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  margin: 2rem 0 5rem;
+}
+.soutenir button {
+  margin: 2rem 0 0;
+}
 }
