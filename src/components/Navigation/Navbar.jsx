@@ -9,7 +9,6 @@ function Navbar() {
       <Link to="/Spectacles">Spectacles</Link>
       <Link to="/Residences">Résidences</Link>
       <Link to="/Pluridisciplinarite">Pluridisciplinarité</Link>
-      <Link to="/Contact">Contact</Link>
     </nav>
   );
 }

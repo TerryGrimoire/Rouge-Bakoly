@@ -1,24 +1,24 @@
 const data = [
   {
     id: 0,
-    title: "Titre de la slide 1",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aliquam doloremque iure similique velit odit!",
-    button: "Texte CTA 1",
-    src: "background1",
+    title: "Découvrez nos résidences",
+    text: "Aliquam tincidunt vel nibh et suscipit. Integer laoreet egestas tempor. Donec vehicula eros a nisi consectetur hendrerit et at arcu.",
+    button: "Voir les résidences",
+    src: "background num1",
   },
   {
     id: 1,
     title: "Titre de la slide 2",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aliquam doloremque iure similique velit odit!",
+    text: "Aliquam tincidunt vel nibh et suscipit. Integer laoreet egestas tempor. Donec vehicula eros a nisi consectetur hendrerit et at arcu.",
     button: "Texte CTA 2",
-    src: "background2",
+    src: "background num2",
   },
   {
     id: 2,
     title: "Titre de la slide 3",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aliquam doloremque iure similique velit odit!",
+    text: "Aliquam tincidunt vel nibh et suscipit. Integer laoreet egestas tempor. Donec vehicula eros a nisi consectetur hendrerit et at arcu.",
     button: "Texte CTA 3",
-    src: "background3",
+    src: "background num3",
   },
 ];
 

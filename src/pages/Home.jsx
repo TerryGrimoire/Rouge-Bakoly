@@ -16,12 +16,13 @@ export default function Home({ helmet }) {
   const handleDragStart = (e) => e.preventDefault();
 
   const items = itemData.map((el) => (
-    <section className={`landing ${el.src}`} onDragStart={handleDragStart}>
-      <div>
-        <h2>{el.title}</h2>
+    <section className="landing" onDragStart={handleDragStart}>
+      <div className={el.src} />
+      <div className="landing_description">
+        <h2>{el.title.toUpperCase()}</h2>
         <p>{el.text}</p>
         <button type="button" className="button_style">
-          {el.button}
+          {el.button.toUpperCase()}
         </button>
       </div>
     </section>
@@ -40,17 +41,21 @@ export default function Home({ helmet }) {
         disableButtonsControls
       />
       <section className="welcome">
-        <img src={logo} alt="logo Rouge Bakoly B et K à coté" />
+        <img
+          src={logo}
+          alt="logo Rouge Bakoly B et K à coté"
+          className="welcome_logo"
+        />
         <div>
-          <h1>Bienvenue chez Rouge Bakoly</h1>
+          <h1>La compagnie Rouge Bakoly</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-            consequatur fuga officia architecto illo earum cum alias incidunt
-            sed? Illum iste obcaecati error nostrum numquam facilis! Recusandae
-            exercitationem id dolores.
+            Ut eleifend, massa a rutrum tincidunt, justo tellus sollicitudin
+            leo, nec maximus enim erat a ex. Aenean rutrum dignissim convallis.
+            Pellentesque sem dolor, hendrerit sit amet porta non, sollicitudin
+            ut quam.
           </p>
           <button type="button" className="button_style">
-            Découvrir la compagnie
+            EN SAVOIR PLUS
           </button>
         </div>
       </section>
