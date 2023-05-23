@@ -1,4 +1,6 @@
+/* eslint-disable import/no-unresolved */
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
@@ -6,7 +8,12 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import itemData from "../data/itemData";
 import aussiData from "../data/aussiData";
 import logo from "../assets/logo.png";
+import facebook from "../assets/facebook.svg";
+import instagram from "../assets/instagram.svg";
+import spotify from "../assets/spotify.svg";
+import youtube from "../assets/youtube.svg";
 import random from "../assets/random.jpg";
+import creation from "../assets/last.png";
 
 export default function Home({ helmet }) {
   useEffect(() => {
@@ -19,7 +26,7 @@ export default function Home({ helmet }) {
     <section className="landing" onDragStart={handleDragStart}>
       <div className={el.src} />
       <div className="landing_description">
-        <h2>{el.title.toUpperCase()}</h2>
+        <h3>{el.title.toUpperCase()}</h3>
         <p>{el.text}</p>
         <button type="button" className="button_style">
           {el.button.toUpperCase()}
@@ -28,7 +35,7 @@ export default function Home({ helmet }) {
     </section>
   ));
   return (
-    <main className="flex-col">
+    <main className="flex-col align-center justify-center">
       <Helmet>
         <title> {helmet.title} | Accueil </title>
         <link rel="canonical" href={helmet.href} />
@@ -60,67 +67,82 @@ export default function Home({ helmet }) {
         </div>
       </section>
       <section className="derniere_creation">
-        <h2>Notre dernière création</h2>
         <div>
-          <img src={random} alt="" />
-          <div>
-            <h3>Nom du spectacle</h3>
+          <img src={creation} alt="" />
+          <article>
+            <h2>NOTRE DERNIÈRE CRÉATION</h2>
+
             <small>Type de spectacle</small>
+            <h3>NOM DU SPECTACLE</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
               nisi odio, sapiente iusto numquam optio sunt, placeat doloribus
               odit nemo voluptas quisquam accusamus est quidem repudiandae
               facere quia, ipsam quae.
             </p>
-            <button type="button" className="button_style">
-              Voir tous nos spectacles
-            </button>
-          </div>
+            <Link to="/Spectacles">
+              <button type="button" className="button_style2">
+                VOIR TOUS NOS SPECTACLES
+              </button>
+            </Link>
+          </article>
         </div>
       </section>
-      <section className="actualite grey">
-        <h2>Notre actualité</h2>
-        <div>
-          <div className="white actualite_spectacle">
-            <img src={random} alt="" />
-            <article>
-              <h3>Nom du spectacle</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
-                nisi odio, sapiente iusto numquam optio sunt, placeat doloribus
-                odit nemo voluptas Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Autem nisi odio, sapiente iusto numquam optio
-                sunt, placeat doloribus odit nemo voluptas quisquam accusamus
-                est quidem repudiandae facere quia, ipsam quae.
-              </p>
-            </article>
-            <div className="buttons_container">
-              <button type="button">{`< Précédent`}</button>
-              <button type="button">{`Suivant >`}</button>
-            </div>
-          </div>
-          <div className="newsletter">
-            <h3>La newsletter</h3>
-            <button type="button" className="button_style">
-              Télécharger
-            </button>
+      <section className="actualite">
+        <h3>NOTRE ACTUALITÉ</h3>
+
+        <div className="actualite_spectacle">
+          <img src={random} alt="" className="actualite_img" />
+          <h2 className="actualite_date">JUIL 08</h2>
+          <article>
+            <h4>Lorem Ipsum dolor sit amet, consectetur adipiscing elit</h4>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+              nisi odio, sapiente iusto numquam optio sunt, placeat doloribus
+              odit nemo voluptas Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Autem nisi odio, sapiente iusto numquam optio
+              sunt, placeat doloribus odit nemo voluptas quisquam accusamus est
+              quidem repudiandae facere quia, ipsam quae.
+            </p>
+          </article>
+          <div className="buttons_container">
+            <button type="button">Précédent</button>
+            <button type="button">Suivant</button>
           </div>
         </div>
+        <div className="newsletter">
+          <h4>Avez-vous lu notre dernière newsletter ?</h4>
+          <button type="button" className="button_style">
+            LIRE LA NEWSLETTER
+          </button>
+        </div>
         <div className="reseaux_sociaux">
-          <h3>Suivez nous sur les réseaux sociaux pour ne rien manquer :</h3>
+          <h3>Suivez nous sur les réseaux sociaux pour ne rien manquer !</h3>
           <div>
-            <img src={random} alt="" />
-            <img src={random} alt="" />
-            <img src={random} alt="" />
+            <a href="/">
+              <img src={facebook} alt="Logo Facebook" />
+            </a>
+            <a href="/">
+              <img src={instagram} alt="Logo Instagram" />
+            </a>
+            <a href="/">
+              <img src={youtube} alt="Logo Youtube" />
+            </a>
+            <a href="/">
+              <img src={spotify} alt="Logo Spotify" />
+            </a>
           </div>
         </div>
       </section>
       <section className="aussis">
-        <h2>Rouge Bakoly c'est aussi</h2>
+        <h2>
+          Rouge Bakoly, <br /> c'est aussi
+        </h2>
         <div className="aussi_container">
           {aussiData.map((el) => (
             <div className="aussi">
-              <article className="darkGrey">
+              <article>
                 <h3>{el.title}</h3>
                 <p>{el.text}</p>
                 <button type="button" className="button_style">
@@ -133,12 +155,12 @@ export default function Home({ helmet }) {
         </div>
       </section>
 
-      <section className="soutenir grey">
-        <h3>Lorem ipsum dolor sit amet</h3>
+      <div className="newsletter soutenir">
+        <h4>Vous souhaitez soutenir la compagnie ?</h4>
         <button type="button" className="button_style">
-          Nous soutenir
+          DÉCOUVRIR COMMENT
         </button>
-      </section>
+      </div>
     </main>
   );
 }
