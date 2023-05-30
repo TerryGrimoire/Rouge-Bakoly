@@ -550,3 +550,41 @@ bottom: 2.5rem;
   background-color: var(--third-color);
   padding: 0 0.25rem;
 }
+
+/********************************************************************* ACTION BY ID *********************************************************************/ 
+.action .top_bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--secondary-bg-color);
+}
+
+.action .top_bar a {
+  color: var(--main-bg-color);
+}
+
+/************** TOP - IMAGE - TEXT ****************/
+
+.action .section_top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.action .section_top > * {
+  width: 50%;
+  height: 100%;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.action .section_top  > img {
+  object-fit: cover;
+}
+.action .text {
+  background-color: #FCF6EF ;
+}

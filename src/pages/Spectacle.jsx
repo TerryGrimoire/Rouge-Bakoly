@@ -44,34 +44,45 @@ function Tarifs({ helmet }) {
   const actionsFiltered = allActions.filter(
     (act) => act.nom && act.type.includes(actions)
   );
-
+  const action = actionsFiltered.filter((acti) => acti.id === id)[0];
+  console.log(action);
   return (
-    <div className="actions">
+    <div className="action">
       <Helmet>
         <title>
-          {helmet.title} | {id}{" "}
+          {helmet.title} | {actions}
         </title>
-        <link rel="canonical" href={`${helmet.href}/Tarifs`} />
+        <link
+          rel="canonical"
+          href={`${helmet.href}/actions/${actions}/${id}`}
+        />
         <meta name="description" content={helmet.description} />
       </Helmet>
-      <main>
-        <section className="actions_container">
-          {actionsFiltered
-            .filter((act) => act.nom && act.id.includes(id))
-            .map((el) => (
-              <div className="action_petit">
-                <img src={el.image} alt={el.nom} />
-                <div className="action_petit_text">
-                  <h4>{el.nom}</h4>
-                  <p>{el.dates}</p>
-                  {el.en_cours.includes("COURS") ? (
-                    <p className="enCours">En cours</p>
-                  ) : null}
-                </div>
-              </div>
-            ))}
-        </section>
-      </main>
+      {action && (
+        <main>
+          <div className="top_bar">
+            <Link to={`/actions/${actions}/${id - 1}`}>Précédent</Link>
+            <Link to={`/actions/${actions}`}> Revenir au sommaire </Link>
+            <Link to={`/actions/${actions}/${id + 1}`}> Suivant </Link>
+          </div>
+          <section className="section_top">
+            <img src={action.image} alt={action.nom} />
+            <div className="text">
+              <h1>{action.nom.toUpperCase()}</h1>
+              <p>{action.type_spectacle}</p>
+              <p>{action.public}</p>
+              {action.duree && action.duree !== "" && (
+                <p>
+                  <span>Durée :</span> {action.duree}
+                </p>
+              )}
+            </div>
+          </section>
+          <section>
+            <p>{action.description}</p>
+          </section>
+        </main>
+      )}
     </div>
   );
 }
