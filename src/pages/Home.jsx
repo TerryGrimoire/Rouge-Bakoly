@@ -13,7 +13,7 @@ import instagram from "../assets/instagram.svg";
 import spotify from "../assets/spotify.svg";
 import youtube from "../assets/youtube.svg";
 import random from "../assets/random.jpg";
-import creation from "../assets/last.png";
+import creation from "../assets/last.jpg";
 
 export default function Home({ helmet }) {
   useEffect(() => {
@@ -80,7 +80,7 @@ export default function Home({ helmet }) {
               odit nemo voluptas quisquam accusamus est quidem repudiandae
               facere quia, ipsam quae.
             </p>
-            <Link to="/Spectacles">
+            <Link to="/actions/Spectacles">
               <button type="button" className="button_style2">
                 VOIR TOUS NOS SPECTACLES
               </button>
@@ -156,7 +156,7 @@ export default function Home({ helmet }) {
       </section>
 
       <div className="newsletter soutenir">
-        <h4>Vous souhaitez soutenir la compagnie ?</h4>
+        <h4>Vous souhaitez soutenir la compagnie ROUGE BAKOLY ?</h4>
         <button type="button" className="button_style">
           DÉCOUVRIR COMMENT
         </button>

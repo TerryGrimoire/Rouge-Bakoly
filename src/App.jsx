@@ -5,8 +5,6 @@ import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home";
 import Compagnie from "./pages/Compagnie";
 import Spectacles from "./pages/Spectacles";
-import Residences from "./pages/Residences";
-import Pluridisciplinarite from "./pages/Pluridisciplinarite";
 import Contact from "./pages/Contact";
 import Mentions from "./pages/Mentions";
 
@@ -25,9 +23,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home helmet={helmet} />} />
           <Route path="/Compagnie" element={<Compagnie helmet={helmet} />} />
-          <Route path="/Spectacles" element={<Spectacles helmet={helmet} />} />
-          <Route path="/Residences" element={<Residences helmet={helmet} />} />
-          <Route path="/Pluridisciplinarite" element={<Pluridisciplinarite helmet={helmet} />} />
+          <Route
+            path="/actions/:actions"
+            element={<Spectacles helmet={helmet} />}
+          />
           <Route path="/Contact" element={<Contact helmet={helmet} />} />
           <Route path="/Mentions" element={<Mentions />} />
         </Routes>

@@ -6,9 +6,9 @@ function Navbar() {
     <nav className="flex justify-between navbar">
       <Link to="/">Accueil</Link>
       <Link to="/Compagnie">La compagnie</Link>
-      <Link to="/Spectacles">Spectacles</Link>
-      <Link to="/Residences">Résidences</Link>
-      <Link to="/Pluridisciplinarite">Pluridisciplinarité</Link>
+      <Link to="/actions/Spectacles">Spectacles</Link>
+      <Link to="/actions/Residences">Résidences</Link>
+      <Link to="/actions/Pluridisciplinarite">Pluridisciplinarité</Link>
     </nav>
   );
 }
