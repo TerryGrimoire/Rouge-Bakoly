@@ -45,7 +45,9 @@ function Tarifs({ helmet }) {
     (act) => act.nom && act.type.includes(actions)
   );
   const action = actionsFiltered.filter((acti) => acti.id === id)[0];
+
   console.log(action);
+
   return (
     <div className="action">
       <Helmet>
@@ -80,6 +82,75 @@ function Tarifs({ helmet }) {
           </section>
           <section>
             <p>{action.description}</p>
+            <div>
+              <article>
+                <h3>L'action culturelle</h3>
+                <p>{action.action_culturelle}</p>
+              </article>
+              <div>
+                <h3>L'équipe</h3>
+                {action.role1 && (
+                  <p>
+                    {" "}
+                    {action.role1} : {action.personne1}
+                  </p>
+                )}
+                {action.role2 && (
+                  <p>
+                    {" "}
+                    {action.role2} : {action.personne2}
+                  </p>
+                )}
+                {action.role3 && (
+                  <p>
+                    {" "}
+                    {action.role3} : {action.personne3}
+                  </p>
+                )}
+                {action.role4 && (
+                  <p>
+                    {" "}
+                    {action.role4} : {action.personne4}
+                  </p>
+                )}
+                {action.role5 && (
+                  <p>
+                    {" "}
+                    {action.role5} : {action.personne5}
+                  </p>
+                )}
+                {action.role6 && (
+                  <p>
+                    {" "}
+                    {action.role6} : {action.personne6}
+                  </p>
+                )}
+                {action.role7 && (
+                  <p>
+                    {" "}
+                    {action.role7} : {action.personne7}
+                  </p>
+                )}
+                {action.role8 && (
+                  <p>
+                    {" "}
+                    {action.role8} : {action.personne8}
+                  </p>
+                )}
+                {action.role9 && (
+                  <p>
+                    {" "}
+                    {action.role9} : {action.personne9}
+                  </p>
+                )}
+                {action.role10 && (
+                  <p>
+                    {" "}
+                    {action.role10} : {action.personne10}
+                  </p>
+                )}
+              </div>
+            </div>
           </section>
         </main>
       )}
