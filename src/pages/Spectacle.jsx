@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import { Helmet } from "react-helmet-async";
 import papa from "papaparse";
 
@@ -21,9 +22,28 @@ function Tarifs({ helmet }) {
 
     let obj = {};
     const json = data2.map((line, index) => {
+      const photos = [];
+      const logos = [];
+      const personnes = [];
+      const roles = [];
+
       if (index > 1) {
         data2[0].forEach((key, j) => {
+          if (key.startsWith("photo")) {
+            photos.push(obj[key]);
+          }
+          if (key.startsWith("logo")) {
+            logos.push(obj[key]);
+          }
+          if (key.startsWith("personne")) {
+            personnes.push(obj[key]);
+          }
+          if (key.startsWith("role")) {
+            roles.push(obj[key]);
+          }
           obj = { ...obj, [key]: line[j] };
+
+          obj = { ...obj, photos, logos, personnes, roles };
         });
       }
       return obj;
@@ -89,69 +109,56 @@ function Tarifs({ helmet }) {
               </article>
               <div>
                 <h3>L'équipe</h3>
-                {action.role1 && (
-                  <p>
-                    {" "}
-                    {action.role1} : {action.personne1}
-                  </p>
-                )}
-                {action.role2 && (
-                  <p>
-                    {" "}
-                    {action.role2} : {action.personne2}
-                  </p>
-                )}
-                {action.role3 && (
-                  <p>
-                    {" "}
-                    {action.role3} : {action.personne3}
-                  </p>
-                )}
-                {action.role4 && (
-                  <p>
-                    {" "}
-                    {action.role4} : {action.personne4}
-                  </p>
-                )}
-                {action.role5 && (
-                  <p>
-                    {" "}
-                    {action.role5} : {action.personne5}
-                  </p>
-                )}
-                {action.role6 && (
-                  <p>
-                    {" "}
-                    {action.role6} : {action.personne6}
-                  </p>
-                )}
-                {action.role7 && (
-                  <p>
-                    {" "}
-                    {action.role7} : {action.personne7}
-                  </p>
-                )}
-                {action.role8 && (
-                  <p>
-                    {" "}
-                    {action.role8} : {action.personne8}
-                  </p>
-                )}
-                {action.role9 && (
-                  <p>
-                    {" "}
-                    {action.role9} : {action.personne9}
-                  </p>
-                )}
-                {action.role10 && (
-                  <p>
-                    {" "}
-                    {action.role10} : {action.personne10}
-                  </p>
-                )}
+                <div>
+                  <div>
+                    {action.roles &&
+                      action.roles
+                        .filter((tap) => tap !== "")
+                        .map((el) => <p>{el} :</p>)}
+                  </div>
+                  <div>
+                    {action.personnes &&
+                      action.personnes
+                        .filter((tap) => tap !== "")
+                        .map((el) => <p>{el}</p>)}
+                  </div>
+                </div>
               </div>
             </div>
           </section>
+          <iframe src={action.video} frameBorder="0" title="video du projet" />
+          <section>
+            <h3>GALERIE PHOTOS</h3>
+            <div>
+              <ResponsiveMasonry>
+                <Masonry gutter="10px">
+                  {action.photos.map((el) => (
+                    <img src={el} alt="" />
+                  ))}
+                </Masonry>
+              </ResponsiveMasonry>
+            </div>
+          </section>
+          {action.en_cours && action.en_cours === "EN COURS" && (
+            <div className="newsletter soutenir">
+              <h4>Vous souhaitez programmer ce spectacle ?</h4>
+              <button type="button" className="button_style">
+                CONTACTEZ-NOUS
+              </button>
+            </div>
+          )}
+          {action.logos && action.logos.length > 0 && (
+            <section>
+              <h3>Avec le soutien de</h3>
+              <ResponsiveMasonry>
+                <Masonry gutter="10px">
+                  {action.logos.map((el) => (
+                    <img src={el} alt="" />
+                  ))}
+                </Masonry>
+              </ResponsiveMasonry>
+            </section>
+          )}
         </main>
       )}
     </div>
