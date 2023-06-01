@@ -62,8 +62,8 @@ function Tarifs({ helmet }) {
         <section className="actions_container">
           {allActions
             .filter((act) => act.nom && act.type.includes(actions))
-            .map((el) => (
-              <Link to={`/actions/${actions}/${el.id}`}>
+            .map((el, index) => (
+              <Link to={`/actions/${actions}/${index}`}>
                 <div className="action_petit">
                   <img src={el.image} alt={el.nom} />
                   <div className="action_petit_text">

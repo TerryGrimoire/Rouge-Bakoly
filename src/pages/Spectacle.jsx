@@ -61,11 +61,10 @@ function Tarifs({ helmet }) {
       .then((data2) => prepareData2(data2.data));
   }, []);
 
-  const actionsFiltered = allActions.filter(
-    (act) => act.nom && act.type.includes(actions)
-  );
-  const action = actionsFiltered.filter((acti) => acti.id === id)[0];
-
+  const action = allActions.filter(
+    (act) => act.type && act.type.includes(actions)
+  )[id];
+  console.log(allActions);
   console.log(action);
 
   return (
@@ -83,14 +82,26 @@ function Tarifs({ helmet }) {
       {action && (
         <main>
           <div className="top_bar">
-            <Link to={`/actions/${actions}/${id - 1}`}>Précédent</Link>
+            {parseInt(id, 10) !== 0 && (
+              <Link to={`/actions/${actions}/${parseInt(id, 10) - 1}`}>
+                Précédent
+              </Link>
+            )}
             <Link to={`/actions/${actions}`}> Revenir au sommaire </Link>
-            <Link to={`/actions/${actions}/${id + 1}`}> Suivant </Link>
+            {parseInt(id, 10) <
+              allActions.filter((act) => act.type && act.type.includes(actions))
+                .length -
+                1 && (
+              <Link to={`/actions/${actions}/${parseInt(id, 10) + 1}`}>
+                {" "}
+                Suivant{" "}
+              </Link>
+            )}
           </div>
           <section className="section_top">
             <img src={action.image} alt={action.nom} />
             <div className="text">
-              <h1>{action.nom.toUpperCase()}</h1>
+              <h1>{action.nom && action.nom.toUpperCase()}</h1>
               <p>{action.type_spectacle}</p>
               <p>{action.public}</p>
               {action.duree && action.duree !== "" && (
@@ -100,16 +111,16 @@ function Tarifs({ helmet }) {
               )}
             </div>
           </section>
-          <section>
-            <p>{action.description}</p>
-            <div>
-              <article>
+          <section className="text_container">
+            <p className="text description">{action.description}</p>
+            <div className="bloc_culturel">
+              <article className="text">
                 <h3>L'action culturelle</h3>
                 <p>{action.action_culturelle}</p>
               </article>
-              <div>
+              <div className="text">
                 <h3>L'équipe</h3>
-                <div>
+                <div className="team">
                   <div>
                     {action.roles &&
                       action.roles
@@ -127,14 +138,13 @@ function Tarifs({ helmet }) {
             </div>
           </section>
           <iframe src={action.video} frameBorder="0" title="video du projet" />
-          <section>
+          <section className="galerie">
             <h3>GALERIE PHOTOS</h3>
             <div>
               <ResponsiveMasonry>
-                <Masonry gutter="10px">
-                  {action.photos.map((el) => (
-                    <img src={el} alt="" />
-                  ))}
+                <Masonry gutter="2rem">
+                  {action.photos &&
+                    action.photos.map((el) => <img src={el} alt="" />)}
                 </Masonry>
               </ResponsiveMasonry>
             </div>
@@ -148,15 +158,13 @@ function Tarifs({ helmet }) {
             </div>
           )}
           {action.logos && action.logos.length > 0 && (
-            <section>
-              <h3>Avec le soutien de</h3>
-              <ResponsiveMasonry>
-                <Masonry gutter="10px">
-                  {action.logos.map((el) => (
-                    <img src={el} alt="" />
-                  ))}
-                </Masonry>
-              </ResponsiveMasonry>
+            <section className="soutien">
+              <h4>Avec le soutien de</h4>
+              <div className="logo_container">
+                {action.logos.map((el) => (
+                  <img src={el} alt="" />
+                ))}
+              </div>
             </section>
           )}
         </main>
