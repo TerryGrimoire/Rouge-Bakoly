@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import presentation from "../assets/presentation.jpg";
-import cecile from "../assets/production_phonographique.jpg";
+import cecile from "../assets/cecile.png";
+import concert from "../assets/concert.jpg";
+import gens from "../assets/residences_longues.jpg";
 
 function Services({ helmet }) {
   useEffect(() => {
@@ -36,9 +38,9 @@ function Services({ helmet }) {
           </p>
           <p>— Louise Bourgeois, Carnets intimes</p>
         </section>
-        <section>
+        <section className="presentation">
           <h2>PRÉSENTATION</h2>
-          <p>
+          <p className="definition">
             « Bakoly » est un mot malgache. Qu’on prononce BAKOULI avec un
             accent tonique sur le “ou”. Du coup le petit “i” ne s’entend presque
             pas. Bakoly pour certains c’est un bol. Pour d’autres une poupée.
@@ -46,9 +48,9 @@ function Services({ helmet }) {
             délicate. Cela nous convient. “Bako” tout seul signifie “joli”.
             Rouge Bakoly, ça demanderait encore plus d’attention, de précaution.
           </p>
-          <div>
+          <div className="duo">
             <img src={presentation} alt="" />
-            <article>
+            <article className="demarche">
               <p>
                 La démarche de travail de la compagnie ROUGE BAKOLY se nourrit
                 d’une mise en réseau partenariale et de rencontres artistiques
@@ -79,8 +81,8 @@ function Services({ helmet }) {
             </article>
           </div>
         </section>
-        <section>
-          <div>
+        <section className="cecile">
+          <div className="duo_cecile">
             <article>
               <h3>CÉCILE FONTAINE</h3>
               <p>
@@ -91,7 +93,7 @@ function Services({ helmet }) {
             </article>
             <img src={cecile} alt="" />
           </div>
-          <article>
+          <article className="article_cecile">
             <p>
               Tantôt metteuse en scène -Chéri concentre-toi s’il-vous-plaît, ou
               auteure de la trame de Zanfandmoun pièce confiée à des
@@ -137,10 +139,10 @@ function Services({ helmet }) {
             </p>
           </article>
         </section>
-        <section>
+        <section className="ephemere">
           <h2>TERRITOIRES ÉPHÉMÈRES</h2>
-          <div>
-            <img src="" alt="" />
+          <div className="duo">
+            <img src={gens} alt="" />
             <article>
               <p>
                 Rouge Bakoly se développe essentiellement dans le Nord et l’Est
@@ -162,7 +164,7 @@ function Services({ helmet }) {
               </p>
             </article>
           </div>
-          <div>
+          <div className="duo">
             <article>
               <p>
                 En privilégiant l’accès gratuit à la démarche de création, par
@@ -178,25 +180,25 @@ function Services({ helmet }) {
                 la joie du faire ensemble.
               </p>
             </article>
-            <img src="" alt="" />
+            <img src={concert} alt="" />
           </div>
         </section>
 
-        <section>
+        <section className="benevoles">
           <h2>ROUGE BAKOLY, SES BÉNÉVOLES</h2>
           <article>
             <p>Rouge Bakoly est une association loi 1901 qui a pour objet:</p>
             <p>
               • De promouvoir la culture, l’art et l’artisanat sous toutes ses
-              formes • De produire et de diffuser toute œuvre artistique (sans
-              aucune limite dans l’utilisation des disciplines artistiques et
-              des supports, ni aucune limite de territoires) • De réunir des
-              artistes de disciplines artistiques différentes • D’allier
-              dimension sociétale et dimension culturelle dans sa recherche
-              artistique • De développer des partenariats avec d’autres
-              associations dans la mise en place de ses projets • De rechercher
-              toute forme de financement permettant la réalisation de ses
-              objectifs{" "}
+              formes <br /> • De produire et de diffuser toute œuvre artistique
+              (sans aucune limite dans l’utilisation des disciplines artistiques
+              et des supports, ni aucune limite de territoires) <br /> • De
+              réunir des artistes de disciplines artistiques différentes <br />{" "}
+              • D’allier dimension sociétale et dimension culturelle dans sa
+              recherche artistique <br /> • De développer des partenariats avec
+              d’autres associations dans la mise en place de ses projets <br />{" "}
+              • De rechercher toute forme de financement permettant la
+              réalisation de ses objectifs
             </p>
             <p>
               L’association se compose de deux catégories de membres adhérents :

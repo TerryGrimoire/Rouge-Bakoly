@@ -373,7 +373,8 @@ max-width: var(--max2);
   justify-content: center;
   padding: 2rem;
   margin: 4rem 0 2rem;
-  background: linear-gradient(90deg, #FCF6EF00, #FCF6EF, #FCF6EF00  )
+  background: linear-gradient(90deg, #FCF6EF00, #FCF6EF, #FCF6EF00);
+  width: 100%;
 }
 
 .actualite h4 {
@@ -484,11 +485,104 @@ max-width: var(--max2);
 
 .compagnie .poem {
   text-align: center;
-  background: linear-gradient(90deg,#FCF6EF00, #FCF6EF, #FCF6EF00  );
+  background: linear-gradient(90deg,#FCF6EF00 , #FCF6EF, #FCF6EF00 );
+  width: 100%;
 }
 
 .compagnie .poem p {
   margin-bottom: 1rem;
+}
+
+.presentation {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.presentation h2 {
+  text-align: left;
+  width: 100%;
+  max-width: var(--max1);
+}
+.presentation .definition {
+  max-width: var(--max1);
+  padding: 0.5rem 0 3rem;
+}
+
+.duo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: var(--max1);
+}
+
+.duo > * {
+  width: 50%;
+  height: 60vh;
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.duo p {
+  padding: 1rem;
+}
+
+.duo > *:first-child {
+  margin-right: 4rem;
+}
+.cecile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.duo_cecile {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: var(--max1);
+  margin-bottom: 2rem;
+}
+.duo_cecile article {
+  background: linear-gradient(90deg, #FCF6EF00, #FCF6EF,  #FCF6EF00 );
+  padding: 2rem 0;
+  width: 60%;
+}
+
+.duo_cecile article p {
+  width: 70%;
+  margin-top: 1rem;
+}
+
+.duo_cecile img {
+  width: 30%;
+}
+
+.cecile .article_cecile {
+  max-width: var(--max1);
+  padding: 2rem 0;
+}
+
+.cecile .article_cecile p {
+  margin-bottom: 1rem;
+}
+
+.ephemere {
+  max-width: var(--max1);
+}
+
+.benevoles {
+  max-width: var(--max1);
+}
+
+.benevoles p {
+  padding: 0.5rem 0;
 }
 
 /********************************************************************* ACTIONS *********************************************************************/ 
