@@ -669,6 +669,7 @@ width: 95vw;
   color: var(--main-bg-color);
   width: 25vw;
   height: 20vw;
+
 }
 
 .actions .action_petit img {
@@ -680,11 +681,12 @@ width: 95vw;
 .actions .action_petit_text {
   padding: 1rem;
   overflow: visible;
+  position: relative;
 }
 
 .actions .enCours {
   position: absolute;
-bottom: 2.5rem;
+  top: -1rem;
   z-index: 2;
   background-color: var(--third-color);
   padding: 0 0.25rem;

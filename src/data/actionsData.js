@@ -14,7 +14,7 @@ const actions = [
   {
     id: "Pluridisciplinarite",
     background: "bgA pluri",
-    title: "Pluridisciplinarité",
+    title: "Autres productions",
     text: "Aliquam tincidunt vel nibh et suscipit. Integer laoreet egestas tempor. Donec vehicula eros a nisi consectetur hendrerit et at arcu.",
   },
 ];
