@@ -473,10 +473,27 @@ max-width: var(--max2);
   margin: 1rem 0 0;
 }
 
+/********************************************************************* COMPAGNIE *********************************************************************/ 
+
+.compagnie {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.compagnie .poem {
+  text-align: center;
+  background: linear-gradient(90deg,#FCF6EF00, #FCF6EF, #FCF6EF00  );
+}
+
+.compagnie .poem p {
+  margin-bottom: 1rem;
+}
 
 /********************************************************************* ACTIONS *********************************************************************/ 
 
-.actions .bgA {
+.bgA {
   height: 40vh;
   display: flex;
   flex-direction: column;
@@ -485,6 +502,8 @@ max-width: var(--max2);
   color: var(--main-bg-color);
   position: relative;
   background-position: center;
+  background-size: cover;
+  width: 100%;
 }
 
 .actions .spectacles {
@@ -497,7 +516,11 @@ max-width: var(--max2);
   background-image: url(./assets/rant_dann_ron.jpg);
 }
 
-.actions .veil {
+ .compagniebg {
+  background-image: url(./assets/compagnie.jpg);
+}
+
+.bgA .veil {
   position: absolute;
   top: 0;
   width: 100%;
@@ -506,8 +529,11 @@ max-width: var(--max2);
   background-color: var(--secondary-bg-color);
 }
 
-.actions p, .actions h1 {
+.bgA p, .bgA h1 {
   z-index: 2;
+  padding: 0.5rem;
+  width: 50%;
+  text-align: center;
 }
 
 .actions .actions_container {
@@ -680,5 +706,3 @@ margin: 2rem;
   align-items: center;
   flex-wrap: wrap;
 }
-
-

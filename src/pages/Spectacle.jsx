@@ -64,8 +64,6 @@ function Tarifs({ helmet }) {
   const action = allActions.filter(
     (act) => act.type && act.type.includes(actions)
   )[id];
-  console.log(allActions);
-  console.log(action);
 
   return (
     <div className="action">
