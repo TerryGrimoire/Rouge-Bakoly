@@ -259,6 +259,7 @@ header {
 .welcome div {
   padding: 0 3rem;
   max-width: var(--max1);
+  width: 80vw;
 }
 
 .welcome h1 {
@@ -325,6 +326,7 @@ max-width: var(--max2);
 .actualite {
   margin: 2rem 1rem;
   max-width: var(--max1);
+  width: 80vw;
 }
 .actualite > h3 {
   padding-bottom: 1rem;
@@ -427,6 +429,7 @@ max-width: var(--max2);
 .aussis {
   text-align: left;
   max-width: var(--max1);
+  width: 80vw;
 }
 .aussi_container {
   padding: 1rem 0;
@@ -441,11 +444,11 @@ max-width: var(--max2);
 
 .aussi > * {
   width: 50%;
-  height: 30vw;
+  min-height: 30vw;
 }
 
 .aussi > img {
-  height: 30vw;
+  min-height: 32.5vw;
   object-fit: cover;
   object-position: center;
 }
@@ -456,7 +459,7 @@ max-width: var(--max2);
   justify-content: center;
   align-items: flex-end;
   text-align: right;
-  padding: 0 4rem;
+  padding: 2rem 4rem;
   background-color: var(--secondary-bg-color);
   color: var(--main-bg-color);
 }
@@ -505,9 +508,11 @@ max-width: var(--max2);
   text-align: left;
   width: 100%;
   max-width: var(--max1);
+  width: 80vw;
 }
 .presentation .definition {
   max-width: var(--max1);
+  width: 80vw;
   padding: 0.5rem 0 3rem;
 }
 
@@ -516,11 +521,12 @@ max-width: var(--max2);
   justify-content: center;
   align-items: center;
   max-width: var(--max1);
+  width: 80vw;
 }
 
 .duo > * {
   width: 50%;
-  height: 60vh;
+  min-height: 60vh;
   object-fit: cover;
   display: flex;
   flex-direction: column;
@@ -535,6 +541,10 @@ max-width: var(--max2);
 .duo > *:first-child {
   margin-right: 4rem;
 }
+
+.duo .presentation_img {
+  height: 70vh;
+}
 .cecile {
   display: flex;
   flex-direction: column;
@@ -547,6 +557,7 @@ max-width: var(--max2);
   justify-content: flex-start;
   align-items: center;
   max-width: var(--max1);
+  width: 80vw;
   margin-bottom: 2rem;
 }
 .duo_cecile article {
@@ -566,6 +577,7 @@ max-width: var(--max2);
 
 .cecile .article_cecile {
   max-width: var(--max1);
+  width: 80vw;
   padding: 2rem 0;
 }
 
@@ -575,10 +587,12 @@ max-width: var(--max2);
 
 .ephemere {
   max-width: var(--max1);
+  width: 80vw;
 }
 
 .benevoles {
   max-width: var(--max1);
+  width: 80vw;
 }
 
 .benevoles p {
@@ -636,6 +650,7 @@ max-width: var(--max2);
   justify-content: flex-start;
   align-items: space-between;
   max-width: var(--max1);
+  width: 80vw;
   margin: 0 auto;
 }
 
@@ -767,6 +782,7 @@ bottom: 2.5rem;
   width: 100%;
   height: 80vh;
   max-width: var(--max1);
+  width: 80vw;
 }
 
 /************** GALERIE PHOTOS ****************/
@@ -793,6 +809,7 @@ margin: 2rem;
 .action .soutien {
   width: 100%;
   max-width: var(--max1);
+  width: 80vw;
 }
 .logo_container {
   display: flex;
