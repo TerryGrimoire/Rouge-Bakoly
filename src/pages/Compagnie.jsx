@@ -49,7 +49,7 @@ function Services({ helmet }) {
             Rouge Bakoly, ça demanderait encore plus d’attention, de précaution.
           </p>
           <div className="duo">
-            <img src={presentation} alt="" className="presentation_img"/>
+            <img src={presentation} alt="" className="presentation_img" />
             <article className="demarche">
               <p>
                 La démarche de travail de la compagnie ROUGE BAKOLY se nourrit

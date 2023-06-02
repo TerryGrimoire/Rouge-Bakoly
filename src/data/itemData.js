@@ -8,16 +8,16 @@ const data = [
   },
   {
     id: 1,
-    title: "Titre de la slide 2",
+    title: "Découvrez nos spectacles",
     text: "Aliquam tincidunt vel nibh et suscipit. Integer laoreet egestas tempor. Donec vehicula eros a nisi consectetur hendrerit et at arcu.",
-    button: "Texte CTA 2",
+    button: "Voir les spectacles",
     src: "background num2",
   },
   {
     id: 2,
-    title: "Titre de la slide 3",
+    title: "Découvrez nos autres productions",
     text: "Aliquam tincidunt vel nibh et suscipit. Integer laoreet egestas tempor. Donec vehicula eros a nisi consectetur hendrerit et at arcu.",
-    button: "Texte CTA 3",
+    button: "Voir les autres productions",
     src: "background num3",
   },
 ];

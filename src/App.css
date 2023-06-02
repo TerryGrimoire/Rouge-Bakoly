@@ -10,7 +10,7 @@
   --font-title : 'Jost', sans-serif;
   --font-text :'Hind', sans-serif;
   --max1: 1200px;
-  --max2: 1450px;
+  --max2: 1500px;
 }
 
 
@@ -157,7 +157,7 @@ header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 1rem 0.5rem;
   height: fit-content;
 }
 
@@ -170,6 +170,8 @@ header {
 
 .navbar * {
   padding: 0rem 2rem;
+  font-family: var(--font-title);
+  font-weight: bold;
 }
 
 /********************************************************************* HOME *********************************************************************/ 
@@ -179,6 +181,7 @@ header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  padding-top: 0;
 }
 
 .landing div.landing_description {
@@ -221,11 +224,11 @@ header {
 }
 
 .num2 {
-  background-image: url(./assets/random.JPG);
+  background-image: url(./assets/spectacles.jpg);
 }
 
 .num3 {
-  background-image: url(./assets/random.JPG);
+  background-image: url(./assets/autres.jpg);
 }
 
 .alice-carousel__dots {
@@ -272,12 +275,13 @@ header {
 
 .welcome img {
   width: 10rem;
-  transform: translateY(-8rem);
+  transform: translateY(-5rem);
 }
 
 /* DERNIERE CREATION*/
 .derniere_creation {
 max-width: var(--max2);
+width: 95vw;
 }
 
 .derniere_creation h2 {
@@ -713,9 +717,9 @@ bottom: 2.5rem;
   justify-content: center;
   align-items: center;
   height: 60vh;
-  width: 100%;
   padding: 0;
   max-width: var(--max2);
+  width: 95vw;
   margin: 2rem 0 0;
 }
 
@@ -748,11 +752,13 @@ bottom: 2.5rem;
 
 .action .description {
   max-width: var(--max2);
+  width: 95vw;
   margin: 0rem 0 2rem;
 }
 
 .action .bloc_culturel {
   max-width: var(--max2);
+  width: 95vw;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -790,6 +796,7 @@ bottom: 2.5rem;
 .action .galerie {
   width: 100%;
   max-width: var(--max2);
+  width: 95vw;
 }
 .action .galerie h3 {
 text-align: center;
@@ -816,4 +823,48 @@ margin: 2rem;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+/********************************************************************* FOOTER *********************************************************************/ 
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+footer img {
+  width: 5rem;
+  margin: 1rem;
+}
+
+footer a {
+  color: var(--third-color) ;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.footer .contact {
+  margin: 1rem 0;
+}
+
+.footer .mentions {
+  position: sticky;
+  bottom: 0;
+  background-color: var(--secondary-bg-color);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 0.5rem;
+}
+
+.footer .mentions a {
+  color: white;
+  margin: 0 1rem;
+  font-size: 0.8rem;
 }
