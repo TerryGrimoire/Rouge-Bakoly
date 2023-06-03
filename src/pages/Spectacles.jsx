@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import papa from "papaparse";
 
@@ -9,6 +9,8 @@ import actionsData from "../data/actionsData";
 
 function Tarifs({ helmet }) {
   const { actions } = useParams();
+  const location = useLocation();
+  const loc = location.pathname;
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -79,7 +81,7 @@ function Tarifs({ helmet }) {
               </Link>
             ))}
         </section>
-        <Collaboration />
+        {loc === "/actions/Residences" ? <Collaboration /> : null}
       </main>
     </div>
   );

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import papa from "papaparse";
 
 import facebook from "../assets/facebook.svg";
@@ -13,6 +13,7 @@ function Collaboration({ helmet }) {
   }, []);
 
   const [collab, setCollab] = useState([]);
+  const [collabs, setCollabs] = useState([]);
   const { id } = useParams();
 
   const prepareData2 = (data2) => {
@@ -42,6 +43,7 @@ function Collaboration({ helmet }) {
         (el) => parseInt(el.id, 10) === parseInt(id, 10)
       )[0]
     );
+    setCollabs([...new Set(json)]);
   };
 
   useEffect(() => {
@@ -49,10 +51,10 @@ function Collaboration({ helmet }) {
       .then((result) => result.text())
       .then((text) => papa.parse(text))
       .then((data2) => prepareData2(data2.data));
-  }, []);
+  }, [id]);
 
   return (
-    <div>
+    <div className="collab_container">
       <Helmet>
         <title>{helmet.title} | ARTISTE</title>
         <link rel="canonical" href={`${helmet.href}/Collaboration/${id}`} />
@@ -61,7 +63,21 @@ function Collaboration({ helmet }) {
 
       {collab.nom ? (
         <main className="collaboration">
-          <div>
+          <div className="top_bar">
+            {parseInt(id, 10) !== 1 && (
+              <Link to={`/Collaborations/${parseInt(id, 10) - 1}`}>
+                Précédent
+              </Link>
+            )}
+            <Link to="/collaborations"> Revenir au sommaire </Link>
+            {parseInt(id, 10) < collabs.length && (
+              <Link to={`/collaborations/${parseInt(id, 10) + 1}`}>
+                {" "}
+                Suivant{" "}
+              </Link>
+            )}
+          </div>
+          <div className="collab_div">
             <h1>{collab.nom}</h1>
             <p>{collab.description}</p>
             <div>
@@ -83,7 +99,7 @@ function Collaboration({ helmet }) {
             </div>
           </div>
           <img src={collab.photo} alt="portrait de l'artiste en question" />
-          <div>
+          <div className="collab_div">
             <h2>Ses collaborations avec Rouge Bakoly : </h2>
             <ul>
               <li>{collab.projet1}</li>

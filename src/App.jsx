@@ -5,6 +5,7 @@ import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home";
 import Compagnie from "./pages/Compagnie";
 import Spectacles from "./pages/Spectacles";
+import Collaborations from "./components/Collaborations";
 import Residences from "./pages/Residences";
 import Spectacle from "./pages/Spectacle";
 import Contact from "./pages/Contact";
@@ -32,6 +33,10 @@ function App() {
           <Route
             path="/actions/:actions/:id"
             element={<Spectacle helmet={helmet} />}
+          />
+          <Route
+            path="/Collaborations"
+            element={<Collaborations helmet={helmet} />}
           />
           <Route
             path="/Collaborations/:id"
