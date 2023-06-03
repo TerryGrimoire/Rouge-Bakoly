@@ -1,8 +1,9 @@
 /* eslint-disable import/no-unresolved */
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import AliceCarousel from "react-alice-carousel";
+import papa from "papaparse";
 import "react-alice-carousel/lib/alice-carousel.css";
 
 import itemData from "../data/itemData";
@@ -13,11 +14,43 @@ import instagram from "../assets/instagram.svg";
 import spotify from "../assets/spotify.svg";
 import youtube from "../assets/youtube.svg";
 import random from "../assets/random.jpg";
-import creation from "../assets/last.jpg";
 
 export default function Home({ helmet }) {
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  const [lastCreation, setLastCreation] = useState([]);
+
+  const prepareData2 = (data2) => {
+    // j correspond aux lignes de A à ZZZ sur fichier Excel
+    // index
+    // line correspond à
+    // index correspond à
+    // key correspond à
+
+    let obj = {};
+    const json = data2.map((line, index) => {
+      if (index > 1) {
+        data2[0].forEach((key, j) => {
+          obj = { ...obj, [key]: line[j] };
+        });
+      }
+      return obj;
+    });
+
+    json.shift();
+    sessionStorage.setItem("data", JSON.stringify([...new Set(json)]));
+    setLastCreation(
+      [...new Set(json)].filter((el) => el.type === "Spectacles")[0]
+    );
+  };
+
+  useEffect(() => {
+    fetch(import.meta.env.VITE_GOOGLE)
+      .then((result) => result.text())
+      .then((text) => papa.parse(text))
+      .then((data2) => prepareData2(data2.data));
   }, []);
 
   const handleDragStart = (e) => e.preventDefault();
@@ -28,12 +61,15 @@ export default function Home({ helmet }) {
       <div className="landing_description">
         <h3>{el.title.toUpperCase()}</h3>
         <p>{el.text}</p>
-        <button type="button" className="button_style">
-          {el.button.toUpperCase()}
-        </button>
+        <Link to={el.lien}>
+          <button type="button" className="button_style">
+            {el.button.toUpperCase()}
+          </button>
+        </Link>
       </div>
     </section>
   ));
+
   return (
     <main className="flex-col align-center justify-center">
       <Helmet>
@@ -61,33 +97,32 @@ export default function Home({ helmet }) {
             Pellentesque sem dolor, hendrerit sit amet porta non, sollicitudin
             ut quam.
           </p>
-          <button type="button" className="button_style">
-            EN SAVOIR PLUS
-          </button>
+          <Link to="/Compagnie">
+            <button type="button" className="button_style">
+              EN SAVOIR PLUS
+            </button>
+          </Link>
         </div>
       </section>
-      <section className="derniere_creation">
-        <div>
-          <img src={creation} alt="" />
-          <article>
-            <h2>NOTRE DERNIÈRE CRÉATION</h2>
+      {lastCreation && (
+        <section className="derniere_creation">
+          <div>
+            <img src={lastCreation.image} alt="" />
+            <article>
+              <h2>NOTRE DERNIÈRE CRÉATION</h2>
 
-            <small>Type de spectacle</small>
-            <h3>NOM DU SPECTACLE</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
-              nisi odio, sapiente iusto numquam optio sunt, placeat doloribus
-              odit nemo voluptas quisquam accusamus est quidem repudiandae
-              facere quia, ipsam quae.
-            </p>
-            <Link to="/actions/Spectacles">
-              <button type="button" className="button_style2">
-                VOIR TOUS NOS SPECTACLES
-              </button>
-            </Link>
-          </article>
-        </div>
-      </section>
+              <small>{lastCreation.type_spectacle}</small>
+              <h3>{lastCreation.nom}</h3>
+              <p>{lastCreation.description}</p>
+              <Link to="/actions/Spectacles">
+                <button type="button" className="button_style2">
+                  VOIR TOUS NOS SPECTACLES
+                </button>
+              </Link>
+            </article>
+          </div>
+        </section>
+      )}
       <section className="actualite">
         <h3>NOTRE ACTUALITÉ</h3>
 
@@ -120,16 +155,28 @@ export default function Home({ helmet }) {
         <div className="reseaux_sociaux">
           <h3>Suivez nous sur les réseaux sociaux pour ne rien manquer !</h3>
           <div>
-            <a href="/">
+            <a
+              href="https://www.facebook.com/rougebakoly"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src={facebook} alt="Logo Facebook" />
             </a>
-            <a href="/">
+            <a
+              href="https://www.instagram.com/rougebakoly/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src={instagram} alt="Logo Instagram" />
             </a>
-            <a href="/">
+            <a
+              href="https://www.youtube.com/@lasepia7890"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src={youtube} alt="Logo Youtube" />
             </a>
-            <a href="/">
+            <a href="/" target="_blank" rel="noreferrer">
               <img src={spotify} alt="Logo Spotify" />
             </a>
           </div>
@@ -145,9 +192,11 @@ export default function Home({ helmet }) {
               <article>
                 <h3>{el.title}</h3>
                 <p>{el.text}</p>
-                <button type="button" className="button_style">
-                  Découvrir
-                </button>
+                <Link to={el.lien}>
+                  <button type="button" className="button_style">
+                    Découvrir
+                  </button>
+                </Link>
               </article>
               <img src={el.src} alt={el.alt} />
             </div>
@@ -157,9 +206,15 @@ export default function Home({ helmet }) {
 
       <div className="newsletter soutenir">
         <h4>Vous souhaitez soutenir la compagnie ROUGE BAKOLY ?</h4>
-        <button type="button" className="button_style">
-          DÉCOUVRIR COMMENT
-        </button>
+        <a
+          href="https://www.helloasso.com/associations/rouge-bakoly"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <button type="button" className="button_style">
+            DÉCOUVRIR COMMENT
+          </button>
+        </a>
       </div>
     </main>
   );

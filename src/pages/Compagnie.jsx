@@ -217,9 +217,15 @@ function Services({ helmet }) {
         </section>
         <div className="newsletter soutenir">
           <h4>Vous souhaitez soutenir la compagnie ROUGE BAKOLY ?</h4>
-          <button type="button" className="button_style">
-            DÉCOUVRIR COMMENT
-          </button>
+          <a
+            href="https://www.helloasso.com/associations/rouge-bakoly"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button type="button" className="button_style">
+              DÉCOUVRIR COMMENT
+            </button>
+          </a>
         </div>
       </main>
     </div>

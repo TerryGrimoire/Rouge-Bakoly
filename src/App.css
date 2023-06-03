@@ -152,6 +152,15 @@ H2 {
   .desktop {
     display: initial;
   }
+
+.mentions-container {
+  padding: 2rem;
+}
+
+.mentions-container * {
+  margin: 1rem 0;
+}
+
 /********************************************************************* NAVBAR *********************************************************************/ 
 header {
   display: flex;
