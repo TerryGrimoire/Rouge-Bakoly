@@ -3,6 +3,8 @@ import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import papa from "papaparse";
 
+import Collaboration from "../components/Collaborations";
+
 import actionsData from "../data/actionsData";
 
 function Tarifs({ helmet }) {
@@ -77,6 +79,7 @@ function Tarifs({ helmet }) {
               </Link>
             ))}
         </section>
+        <Collaboration />
       </main>
     </div>
   );

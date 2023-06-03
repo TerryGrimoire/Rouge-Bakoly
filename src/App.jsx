@@ -5,6 +5,7 @@ import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home";
 import Compagnie from "./pages/Compagnie";
 import Spectacles from "./pages/Spectacles";
+import Residences from "./pages/Residences";
 import Spectacle from "./pages/Spectacle";
 import Contact from "./pages/Contact";
 import Mentions from "./pages/Mentions";
@@ -31,6 +32,10 @@ function App() {
           <Route
             path="/actions/:actions/:id"
             element={<Spectacle helmet={helmet} />}
+          />
+          <Route
+            path="/Collaborations/:id"
+            element={<Residences helmet={helmet} />}
           />
           <Route path="/Contact" element={<Contact helmet={helmet} />} />
           <Route path="/Mentions" element={<Mentions />} />
