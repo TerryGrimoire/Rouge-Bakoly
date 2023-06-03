@@ -30,16 +30,16 @@ function Tarifs({ helmet }) {
       if (index > 1) {
         data2[0].forEach((key, j) => {
           if (key.startsWith("photo")) {
-            photos.push(obj[key]);
+            photos.push(line[j]);
           }
           if (key.startsWith("logo")) {
-            logos.push(obj[key]);
+            logos.push(line[j]);
           }
           if (key.startsWith("personne")) {
-            personnes.push(obj[key]);
+            personnes.push(line[j]);
           }
           if (key.startsWith("role")) {
-            roles.push(obj[key]);
+            roles.push(line[j]);
           }
           obj = { ...obj, [key]: line[j] };
 
