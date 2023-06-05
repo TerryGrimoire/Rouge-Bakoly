@@ -964,3 +964,335 @@ footer a:hover {
 .collaboration h2 {
   font-size: 1.8rem;
 }
+
+/******************************************************************************************************************************************/ 
+/******************************************************************************************************************************************/ 
+/******************************************************************************************************************************************/ 
+/********************************************************************* DESKTOP *********************************************************************/ 
+/******************************************************************************************************************************************/ 
+/******************************************************************************************************************************************/ 
+/******************************************************************************************************************************************/ 
+
+
+@media screen and (max-width: 900px) {
+
+
+/********************************************************************* HOME *********************************************************************/ 
+/***** CAROUSEL ****/
+.landing {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 0;
+  background-color: var(--secondary-bg-color);
+}
+
+.landing div.landing_description {
+  height: 50vh;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  background-color: var(--secondary-bg-color);
+  color: var(--main-bg-color);
+  position: relative;
+}
+
+.landing div.landing_description * {
+  margin-bottom: 1.5rem;
+}
+
+.landing div.landing_description h3 {
+  line-height: 2.2rem;
+  transform: translate(0rem);
+}
+
+.alice-carousel, .alice-carousel * {
+  overflow: visible;
+}
+
+.background {
+  width: 100%;
+  height: 40vh;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.num1 {
+  background-image: url(./assets/landing.png);
+  background-position: right;
+
+}
+
+.num2 {
+  background-image: url(./assets/spectacles.jpg);
+}
+
+.num3 {
+  background-image: url(./assets/autres.jpg);
+  background-position: right;
+}
+
+.alice-carousel__dots {
+  position: absolute;
+  bottom: 2rem;
+  left: 45%;
+}
+.alice-carousel__dots-item {
+  transform: scale(1.5);
+  border: var(--main-bg-color) solid 1px;
+  background-color: transparent !important;
+}
+
+.alice-carousel__dots-item.__active {
+  background: var(--main-bg-color) !important;
+}
+
+/* La compagnie Rouge Bakoly */
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 2rem;
+  background-color: #FCF6EF;
+  margin-top: 0rem;
+  overflow: visible;
+  width: 100%;
+}
+
+.welcome div {
+  padding: 0rem;
+  max-width: var(--max1);
+  width: 80vw;
+}
+
+.welcome h1 {
+  font-size: 2rem;
+}
+
+.welcome div p {
+  margin-bottom: 1rem;
+}
+
+.welcome img {
+  width: 10rem;
+  transform: translateY(-5rem);
+}
+
+/* DERNIERE CREATION*/
+.derniere_creation {
+max-width: var(--max2);
+width: 100vw;
+}
+
+.derniere_creation h2 {
+  margin: 0 0 2rem;
+  text-align: left;
+  transform: translateX(0rem);
+  color: var(--main-bg-color);
+}
+ h3 {
+  font-size: 2rem;
+}
+.derniere_creation > div > * {
+  width: 100%;
+}
+.derniere_creation > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.derniere_creation article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+  background-color: var(--secondary-bg-color);
+  color: var(--main-bg-color);
+  overflow: visible;
+  text-align: left;
+}
+
+.derniere_creation article p{
+  margin: 2rem 0;
+  font-weight: normal;
+  font-family: var(--font-text);
+}
+
+.derniere_creation small {
+  color: #FFFFFF9A;
+}
+
+.derniere_creation img {
+  object-fit: cover;
+
+}
+/****************************  actualite ******************************/
+.actualite {
+  margin: 2rem 1rem;
+  max-width: var(--max1);
+  width: 95vw;
+}
+.actualite > h3 {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid black;
+}
+
+.actualite .actualite_spectacle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: #10101033 1px solid;
+  position: relative;
+  margin: 3rem 0;
+  height: 40%;
+  overflow: visible;
+}
+
+.actualite .actualite_spectacle img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.actualite article {
+  padding: 2rem;
+  max-width: 100%;
+}
+
+.actualite article h4 {
+  margin-bottom: 1rem;
+}
+
+.actualite .actualite_date {
+  padding: 2rem;
+  background-color: #FCF6EF;
+  width: 50%;
+  height: 80%;
+  text-align: center;
+  transform: translateX(0rem);
+  margin-top: 2rem;
+}
+
+ .newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  margin: 4rem 0 2rem;
+  background: linear-gradient(90deg, #FCF6EF00, #FCF6EF, #FCF6EF00);
+  width: 100%;
+  text-align: center;
+}
+
+.actualite h4 {
+  margin-bottom: 1rem;
+}
+.actualite  .buttons_container {
+  position: absolute;
+  top: -2.5rem;
+  right: 0rem;
+}
+.actualite  .buttons_container * {
+  border: none;
+  margin-left: 1rem;
+  color: var(--third-color);
+  text-decoration: underline;
+  font-weight: bold;
+  background-color: transparent;
+}
+
+.actualite .reseaux_sociaux {
+  text-align: center;
+  padding: 2rem 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.actualite .reseaux_sociaux h3 {
+  width: 100%;
+}
+.actualite .reseaux_sociaux div {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+
+}
+.actualite .reseaux_sociaux img {
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+  border-radius: 50%;
+  border: solid grey 2px;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+/******** ROUGE BAKOLY c'est aussi ************/ 
+
+.aussis {
+  text-align: center;
+  max-width: var(--max1);
+  width: 100vw;
+}
+.aussi_container {
+  padding: 1rem 0;
+}
+
+.aussi {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.aussi:nth-of-type(2n-1) {
+  flex-direction: column-reverse;
+}
+
+.aussi > * {
+  width: 100%;
+  min-height: 30vw;
+}
+
+.aussi > img {
+  height: 50vh;
+  min-height: 50vw;
+  object-fit: cover;
+  object-position: center;
+}
+
+.aussi article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: var(--secondary-bg-color);
+  color: var(--main-bg-color);
+}
+
+.aussi:nth-of-type(2n-1) article {
+  align-items: center;
+  text-align: center;
+}
+
+.aussi article p {
+  margin: 2rem 0;
+}
+
+.soutenir button {
+  margin: 1rem 0 0;
+}
+}
