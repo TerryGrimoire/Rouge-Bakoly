@@ -28,7 +28,7 @@ function Tarifs({ helmet }) {
 
     let obj = {};
     const json = data2.map((line, index) => {
-      if (index > 1) {
+      if (index > 0) {
         data2[0].forEach((key, j) => {
           obj = { ...obj, [key]: line[j] };
         });

@@ -842,6 +842,11 @@ margin: 2rem;
   align-items: center;
   flex-wrap: wrap;
 }
+
+.action .soutien img {
+  height: 8rem;
+  width: auto;
+}
 /********************************************************************* FOOTER *********************************************************************/ 
 
 footer {

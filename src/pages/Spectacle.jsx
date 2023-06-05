@@ -27,7 +27,7 @@ function Tarifs({ helmet }) {
       const personnes = [];
       const roles = [];
 
-      if (index > 1) {
+      if (index > 0) {
         data2[0].forEach((key, j) => {
           if (key.startsWith("photo")) {
             photos.push(line[j]);
