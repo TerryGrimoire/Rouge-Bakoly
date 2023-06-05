@@ -14,17 +14,27 @@ function Nav({ setOpenBurger }) {
       </button>
       <Link to="/">
         <button type="button" onClick={() => setOpenBurger(false)}>
-          Accueil
+          ACCUEIL
         </button>
       </Link>
-      <Link to="/Services">
+      <Link to="/Compagnie">
         <button type="button" onClick={() => setOpenBurger(false)}>
-          Services
+          COMPAGNIE
         </button>
       </Link>
-      <Link to="/Tarifs">
+      <Link to="/actions/Spectacles">
         <button type="button" onClick={() => setOpenBurger(false)}>
-          Tarifs
+          SPECTACLES
+        </button>
+      </Link>
+      <Link to="/actions/Residences">
+        <button type="button" onClick={() => setOpenBurger(false)}>
+          RÉSIDENCES
+        </button>
+      </Link>
+      <Link to="/actions/Pluridisciplinarite">
+        <button type="button" onClick={() => setOpenBurger(false)}>
+          AUTRES PRODUCTIONS
         </button>
       </Link>
     </nav>
