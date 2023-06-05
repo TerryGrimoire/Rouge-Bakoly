@@ -13,7 +13,6 @@ import facebook from "../assets/facebook.svg";
 import instagram from "../assets/instagram.svg";
 import spotify from "../assets/spotify.svg";
 import youtube from "../assets/youtube.svg";
-import random from "../assets/random.jpg";
 
 export default function Home({ helmet }) {
   useEffect(() => {
@@ -21,6 +20,8 @@ export default function Home({ helmet }) {
   }, []);
 
   const [lastCreation, setLastCreation] = useState([]);
+  const [actu, setActu] = useState([]);
+  const [number, setNumber] = useState(0);
 
   const prepareData2 = (data2) => {
     // j correspond aux lignes de A à ZZZ sur fichier Excel
@@ -51,6 +52,35 @@ export default function Home({ helmet }) {
       .then((result) => result.text())
       .then((text) => papa.parse(text))
       .then((data2) => prepareData2(data2.data));
+  }, []);
+
+  const prepareData = (data) => {
+    // j correspond aux lignes de A à ZZZ sur fichier Excel
+    // index
+    // line correspond à
+    // index correspond à
+    // key correspond à
+
+    let obj = {};
+    const json = data.map((line, index) => {
+      if (index > 0) {
+        data[0].forEach((key, j) => {
+          obj = { ...obj, [key]: line[j] };
+        });
+      }
+      return obj;
+    });
+
+    json.shift();
+    sessionStorage.setItem("actu", JSON.stringify([...new Set(json)]));
+    setActu([...new Set(json)]);
+  };
+
+  useEffect(() => {
+    fetch(import.meta.env.VITE_GOOGLE_ACTU)
+      .then((result) => result.text())
+      .then((text) => papa.parse(text))
+      .then((data) => prepareData(data.data));
   }, []);
 
   const handleDragStart = (e) => e.preventDefault();
@@ -126,32 +156,51 @@ export default function Home({ helmet }) {
       <section className="actualite">
         <h3>NOTRE ACTUALITÉ</h3>
 
-        <div className="actualite_spectacle">
-          <img src={random} alt="" className="actualite_img" />
-          <h2 className="actualite_date">JUIL 08</h2>
-          <article>
-            <h4>Lorem Ipsum dolor sit amet, consectetur adipiscing elit</h4>
+        {actu.length > 0 ? (
+          <div className="actualite_spectacle">
+            <img
+              src={actu[number].photo}
+              alt=""
+              className={actu[number].titre}
+            />
+            <h2 className="actualite_date">JUIL 08</h2>
+            <article>
+              <h4>{actu[number].titre}</h4>
 
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
-              nisi odio, sapiente iusto numquam optio sunt, placeat doloribus
-              odit nemo voluptas Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Autem nisi odio, sapiente iusto numquam optio
-              sunt, placeat doloribus odit nemo voluptas quisquam accusamus est
-              quidem repudiandae facere quia, ipsam quae.
-            </p>
-          </article>
-          <div className="buttons_container">
-            <button type="button">Précédent</button>
-            <button type="button">Suivant</button>
+              <p>{actu[number].texte}</p>
+            </article>
+            <div className="buttons_container">
+              {number !== 0 ? (
+                <button type="button" onClick={() => setNumber(number - 1)}>
+                  Précédent
+                </button>
+              ) : (
+                <button type="button" className="shadow">
+                  Précédent
+                </button>
+              )}
+              {number < actu.length - 1 ? (
+                <button type="button" onClick={() => setNumber(number + 1)}>
+                  Suivant
+                </button>
+              ) : (
+                <button type="button" className="shadow">
+                  Suivant
+                </button>
+              )}
+            </div>
           </div>
-        </div>
-        <div className="newsletter">
-          <h4>Avez-vous lu notre dernière newsletter ?</h4>
-          <button type="button" className="button_style">
-            LIRE LA NEWSLETTER
-          </button>
-        </div>
+        ) : null}
+        {actu.length > 0 && (
+          <div className="newsletter">
+            <h4>Avez-vous lu notre dernière newsletter ?</h4>
+            <a href={actu[0].newsletter} target="_blank" rel="noreferrer">
+              <button type="button" className="button_style">
+                LIRE LA NEWSLETTER
+              </button>
+            </a>
+          </div>
+        )}
         <div className="reseaux_sociaux">
           <h3>Suivez nous sur les réseaux sociaux pour ne rien manquer !</h3>
           <div>
