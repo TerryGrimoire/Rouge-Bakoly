@@ -51,7 +51,7 @@ function Collaborations() {
     </Link>
   ));
   const responsive = {
-    0: { items: 1 },
+    0: { items: 1.5 },
     900: { items: 4.2 },
   };
   return (
