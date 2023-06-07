@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import Error from "./pages/Error";
 import Home from "./pages/Home";
 import Compagnie from "./pages/Compagnie";
 import Spectacles from "./pages/Spectacles";
@@ -24,6 +25,7 @@ function App() {
       <BrowserRouter>
         <Header helmet={helmet} />
         <Routes>
+          <Route path="*" element={<Error />} />
           <Route path="/" element={<Home helmet={helmet} />} />
           <Route path="/Compagnie" element={<Compagnie helmet={helmet} />} />
           <Route

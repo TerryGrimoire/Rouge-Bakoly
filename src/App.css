@@ -966,6 +966,25 @@ footer a:hover {
 .collaboration h2 {
   font-size: 1.8rem;
 }
+/********************************************************************* ERROR *********************************************************************/ 
+
+.error {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  background-image: url(./assets/background.gif);
+  color: var(--main-bg-color);
+}
+
+.error * {
+  margin: 0.5rem 0;
+}
+.error h1 {
+  font-size: 10rem;
+}
+
 
 /******************************************************************************************************************************************/ 
 /******************************************************************************************************************************************/ 
@@ -1914,6 +1933,29 @@ footer a:hover {
   color: white;
   margin: 0 1rem;
   font-size: 0.8rem;
+}
+/********************************************************************* ERROR *********************************************************************/ 
+
+.error {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  background-image: url(./assets/background.gif);
+  color: var(--main-bg-color);
+  text-align: center;
+}
+
+.error * {
+  margin: 0.5rem 0;
+}
+.error h1 {
+  font-size: 4rem;
+}
+
+.error h2 {
+  font-size: 1.5rem;
 }
 
 }
