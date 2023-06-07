@@ -1043,9 +1043,12 @@ header {
    display: flex;
    justify-content: flex-end;
    width: 95%;
+   height: fit-content;
+   padding: 0;
+   margin-top: 0;
    margin-left: 0.5rem;
    box-shadow: none;
-   position: absolute;
+   position: sticky;
    top: 0;
    right: 1rem;
  }
