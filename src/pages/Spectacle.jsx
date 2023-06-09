@@ -159,9 +159,11 @@ function Tarifs({ helmet }) {
             <section className="soutien">
               <h4>Avec le soutien de</h4>
               <div className="logo_container">
-                {action.logos.map((el) => (
-                  <img src={el} alt="" />
-                ))}
+                {action.logos
+                  .filter((el) => el !== "")
+                  .map((el) => (
+                    <img src={el} alt="" />
+                  ))}
               </div>
             </section>
           )}

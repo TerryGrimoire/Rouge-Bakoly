@@ -112,6 +112,9 @@ export default function Home({ helmet }) {
         items={items}
         infinite
         disableButtonsControls
+        autoPlay
+        autoPlayInterval={5000}
+        loop
       />
       <section className="welcome">
         <img
@@ -143,7 +146,11 @@ export default function Home({ helmet }) {
 
               <small>{lastCreation.type_spectacle}</small>
               <h3>{lastCreation.nom}</h3>
-              <p>{lastCreation.description}</p>
+              <p>
+                {lastCreation.description &&
+                  lastCreation.description.substring(0, 260)}
+                ...
+              </p>
               <Link to="/actions/Spectacles">
                 <button type="button" className="button_style2">
                   VOIR TOUS NOS SPECTACLES
@@ -163,7 +170,11 @@ export default function Home({ helmet }) {
               alt=""
               className={actu[number].titre}
             />
-            <h2 className="actualite_date">JUIL 08</h2>
+            <div className="actualite_date">
+              {actu[number].date.split(" ").map((el) => (
+                <h3>{el}</h3>
+              ))}
+            </div>
             <article>
               <h4>{actu[number].titre}</h4>
 
@@ -219,7 +230,7 @@ export default function Home({ helmet }) {
               <img src={instagram} alt="Logo Instagram" />
             </a>
             <a
-              href="https://www.youtube.com/@lasepia7890"
+              href="https://www.youtube.com/@rougebakoly1165"
               target="_blank"
               rel="noreferrer"
             >
