@@ -77,7 +77,7 @@ function Tarifs({ helmet }) {
         />
         <meta name="description" content={helmet.description} />
       </Helmet>
-      {action && (
+      {action ? (
         <main>
           <div className="top_bar">
             {parseInt(id, 10) !== 0 && (
@@ -168,6 +168,8 @@ function Tarifs({ helmet }) {
             </section>
           )}
         </main>
+      ) : (
+        <p className="middle">Chargement ...</p>
       )}
     </div>
   );

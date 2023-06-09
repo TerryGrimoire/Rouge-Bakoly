@@ -168,6 +168,15 @@ button:hover {
 .shadow {
   opacity: 50%;
 }
+
+.middle {
+  width: 100%;
+  min-height: 30vh;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /********************************************************************* NAVBAR *********************************************************************/ 
 header {
   display: flex;

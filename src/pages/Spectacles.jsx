@@ -64,22 +64,26 @@ function Tarifs({ helmet }) {
           <div className="veil" />
         </section>
         <section className="actions_container">
-          {allActions
-            .filter((act) => act.nom && act.type.includes(actions))
-            .map((el, index) => (
-              <Link to={`/actions/${actions}/${index}`}>
-                <div className="action_petit">
-                  <img src={el.image} alt={el.nom} />
-                  <div className="action_petit_text">
-                    <h4>{el.nom}</h4>
-                    <p>{el.dates}</p>
-                    {el.en_cours.includes("COURS") ? (
-                      <p className="enCours">En cours</p>
-                    ) : null}
+          {allActions.length > 0 ? (
+            allActions
+              .filter((act) => act.nom && act.type.includes(actions))
+              .map((el, index) => (
+                <Link to={`/actions/${actions}/${index}`}>
+                  <div className="action_petit">
+                    <img src={el.image} alt={el.nom} />
+                    <div className="action_petit_text">
+                      <h4>{el.nom}</h4>
+                      <p>{el.dates}</p>
+                      {el.en_cours.includes("COURS") ? (
+                        <p className="enCours">En cours</p>
+                      ) : null}
+                    </div>
                   </div>
-                </div>
-              </Link>
-            ))}
+                </Link>
+              ))
+          ) : (
+            <p className="middle">Chargement ...</p>
+          )}
         </section>
         {loc === "/actions/Residences" ? <Collaboration /> : null}
       </main>
