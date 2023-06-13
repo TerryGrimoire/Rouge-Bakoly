@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import papa from "papaparse";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
+import random from "../assets/avatar.webp";
 
 function Collaborations() {
   const [collab, setCollab] = useState([]);
@@ -45,7 +46,7 @@ function Collaborations() {
   const items = collab.map((el) => (
     <Link to={`/Collaborations/${el.id}`} onDragStart={handleDragStart}>
       <div>
-        <img src={el.photo} alt={el.nom} />
+        <img src={el.photo ? el.photo : random} alt={el.nom} />
         <h3>{el.nom}</h3>
       </div>
     </Link>

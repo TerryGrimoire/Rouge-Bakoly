@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import { Link, useParams } from "react-router-dom";
 import papa from "papaparse";
 
+import avatar from "../assets/avatar.webp";
 import facebook from "../assets/facebook.svg";
 import instagram from "../assets/instagram.svg";
 import youtube from "../assets/youtube.svg";
@@ -98,17 +99,22 @@ function Collaboration({ helmet }) {
               )}
             </div>
           </div>
-          <img src={collab.photo} alt="portrait de l'artiste en question" />
-          <div className="collab_div">
-            <h2>Ses collaborations avec Rouge Bakoly : </h2>
-            <ul>
-              <li>{collab.projet1}</li>
-              <li>{collab.projet2}</li>
-              <li>{collab.projet3}</li>
-              <li>{collab.projet4}</li>
-              <li>{collab.projet5}</li>
-            </ul>
-          </div>
+          <img
+            src={collab.photo ? collab.photo : avatar}
+            alt="portrait de l'artiste en question"
+          />
+          {collab.projet1 && (
+            <div className="collab_div">
+              <h2>Ses collaborations avec Rouge Bakoly : </h2>
+              <ul>
+                <li>{collab.projet1}</li>
+                <li>{collab.projet2}</li>
+                <li>{collab.projet3}</li>
+                <li>{collab.projet4}</li>
+                <li>{collab.projet5}</li>
+              </ul>
+            </div>
+          )}
         </main>
       ) : (
         <p>Chargement de l'artiste</p>

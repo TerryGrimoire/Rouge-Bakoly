@@ -167,18 +167,18 @@ export default function Home({ helmet }) {
           <div className="actualite_spectacle">
             <img
               src={actu[number].photo}
-              alt=""
-              className={actu[number].titre}
+              alt={actu[number].titre}
+              className="actualite_img"
             />
-            <div className="actualite_date">
-              {actu[number].date.split(" ").map((el) => (
-                <h3>{el}</h3>
-              ))}
-            </div>
+            <h3 className="actualite_date">{actu[number].date}</h3>
             <article>
               <h4>{actu[number].titre}</h4>
 
-              <p>{actu[number].texte}</p>
+              <p>
+                {actu[number].texte.split("//").map((el) => (
+                  <span> {el} </span>
+                ))}
+              </p>
             </article>
             <div className="buttons_container">
               {number !== 0 ? (
