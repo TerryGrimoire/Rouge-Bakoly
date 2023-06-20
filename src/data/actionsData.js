@@ -3,19 +3,19 @@ const actions = [
     id: "Spectacles",
     background: "bgA spectacles",
     title: "Les spectacles",
-    text: "Aliquam tincidunt vel nibh et suscipit. Integer laoreet egestas tempor. Donec vehicula eros a nisi consectetur hendrerit et at arcu.",
+    text: "Vyin gardé, zét in zyé, gard poudvré, karkiy ton kanèt, gèt koman lo kèr i bat !",
   },
   {
     id: "Residences",
     background: "bgA residences",
     title: "Les résidences",
-    text: "Aliquam tincidunt vel nibh et suscipit. Integer laoreet egestas tempor. Donec vehicula eros a nisi consectetur hendrerit et at arcu.",
+    text: "Isi an o, isi an ba, arét aou terla, pran lo tan koz ek domoun.",
   },
   {
     id: "Pluridisciplinarite",
     background: "bgA pluri",
     title: "Autres productions",
-    text: "Aliquam tincidunt vel nibh et suscipit. Integer laoreet egestas tempor. Donec vehicula eros a nisi consectetur hendrerit et at arcu.",
+    text: "Lidantité sa lé in nafèr touzour an mouvman sa.",
   },
 ];
 

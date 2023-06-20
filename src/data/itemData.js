@@ -2,7 +2,7 @@ const data = [
   {
     id: 0,
     title: "Découvrez nos résidences",
-    text: "Aliquam tincidunt vel nibh et suscipit. Integer laoreet egestas tempor. Donec vehicula eros a nisi consectetur hendrerit et at arcu.",
+    text: "Si le spectacle se savoure sur un temps court, la résidence artistique d’infusion ou de diffusion nous permet de rencontrer les habitants, leur quartier, dans un enrichissement réciproque autour de pratiques et de savoir-faire locaux.",
     button: "Voir les résidences",
     lien: "/actions/Residences",
     src: "background num1",
@@ -10,7 +10,7 @@ const data = [
   {
     id: 1,
     title: "Découvrez nos spectacles",
-    text: "Aliquam tincidunt vel nibh et suscipit. Integer laoreet egestas tempor. Donec vehicula eros a nisi consectetur hendrerit et at arcu.",
+    text: "Rouge Bakoly a pour activité principale la production de spectacle vivant. Nous diffusons en salle et en dehors des salles, dans des lieux inédits. Depuis la mise en place du Pass Culture, nous donnons aussi des représentations en milieu scolaire.",
     button: "Voir les spectacles",
     lien: "/actions/Spectacles",
 
@@ -19,7 +19,7 @@ const data = [
   {
     id: 2,
     title: "Découvrez nos autres productions",
-    text: "Aliquam tincidunt vel nibh et suscipit. Integer laoreet egestas tempor. Donec vehicula eros a nisi consectetur hendrerit et at arcu.",
+    text: "Ce qui ne relève pas du spectacle vivant peut relever chez nous des Arts Visuels, de l’artisanat, de la production phonographique, de l’audio-visuelle…nous ne mettons pas de limites dans la rencontre et l’exploration des formes.",
     button: "Voir les autres productions",
     lien: "/actions/Pluridisciplinarite",
     src: "background num3",

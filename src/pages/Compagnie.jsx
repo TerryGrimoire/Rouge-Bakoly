@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import presentation from "../assets/presentation.jpg";
 import cecile from "../assets/cecile.png";
-import concert from "../assets/concert.jpg";
-import gens from "../assets/residences_longues.jpg";
+import concert from "../assets/biblio_territoires_ephemeres.jpg";
+import gens from "../assets/gradins.jpg";
 
 function Services({ helmet }) {
   useEffect(() => {
@@ -18,11 +18,8 @@ function Services({ helmet }) {
       </Helmet>
       <main className="compagnie">
         <section className="bgA compagniebg">
-          <h1>LA COMPAGNIE</h1>
-          <p>
-            Aliquam tincidunt vel nibh et suscipit. Integer laoreet egestas
-            tempor. Donec vehicula eros a nisi consectetur hendrerit et at arcu.
-          </p>
+          <h1>Rouge Bakoly</h1>
+          <p>Rouv lo zyé. Rouv lo kèr. Mèt ansanm.</p>
           <div className="veil" />
         </section>
         <section className="poem">
@@ -41,42 +38,36 @@ function Services({ helmet }) {
         <section className="presentation">
           <h2>PRÉSENTATION</h2>
           <p className="definition">
-            « Bakoly » est un mot malgache. Qu’on prononce BAKOULI avec un
-            accent tonique sur le “ou”. Du coup le petit “i” ne s’entend presque
-            pas. Bakoly pour certains c’est un bol. Pour d’autres une poupée.
-            Qui ont en commun la porcelaine comme matière. Matière fragile,
-            délicate. Cela nous convient. “Bako” tout seul signifie “joli”.
-            Rouge Bakoly, ça demanderait encore plus d’attention, de précaution.
+            *"Bakoly" est un mot malgache. Qu’on prononce BAKOULI avec un accent
+            tonique sur le "ou". Du coup le petit "i" ne s’entend presque pas.
+            Bakoly pour certains c’est un bol. Pour d’autres une poupée. Qui ont
+            en commun la porcelaine comme matière. Matière fragile, délicate.
+            Cela nous convient. "Bako" tout seul signifie "joli". Rouge Bakoly,
+            ça demanderait encore plus d’attention, de précaution.
           </p>
           <div className="duo">
             <img src={presentation} alt="" className="presentation_img" />
             <article className="demarche">
               <p>
                 La démarche de travail de la compagnie ROUGE BAKOLY se nourrit
-                d’une mise en réseau partenariale et de rencontres artistiques
-                pluridisciplinaires au service d’un discours artistique qui
-                traite de notre société contemporaine.
+                d'une <span>mise en réseau partenariale</span> et de{" "}
+                <span>rencontres artistiques pluridisciplinaires</span> au
+                service d'un discours qui traite de notre société contemporaine.
               </p>
               <p>
-                Son projet fondateur Chéri concentre-toi s’il vous plaît pose
-                les bases du processus de création de la compagnie:
+                Son projet fondateur Chéri concentre-toi s’il vous plaît a donné
+                les ingrédients essentiels des processus de création de la
+                compagnie :
+              </p>
+              <p>-un ancrage social fort</p>
+              <p>
+                -de la collecte de récit de vie, de l’écoute, de la
+                transcription, de la transformation, de l’interprétation
               </p>
               <p>
-                - un ancrage social avec une observation de milieux et d’univers
-                singuliers grâce à des partenaires dans le champ social ou le
-                champ de la santé, en établissant avec eux des liens de
-                confiance
-              </p>
-              <p>
-                - une collecte de récit de vie, des transcriptions fidèles,
-                anonymisées, confiée à une auteure locale ou internationale et
-                transformées en paroles pour le théâtre
-              </p>
-              <p>
-                - l’envie de créer un espace où des artistes de disciplines
-                différentes peuvent venir se rencontrer, chercher ensemble s’ils
-                le souhaitent, ou bien mettre leur pratique artistique au
-                service d’une proposition commune.
+                -l’envie de créer un espace où des artistes de disciplines
+                différentes fabriquent ensemble et rencontre une diversité de
+                publics
               </p>
             </article>
           </div>
@@ -95,47 +86,40 @@ function Services({ helmet }) {
           </div>
           <article className="article_cecile">
             <p>
-              Tantôt metteuse en scène -Chéri concentre-toi s’il-vous-plaît, ou
-              auteure de la trame de Zanfandmoun pièce confiée à des
-              improvisateurs qu’elle met en scène ; tantôt interprète Saady Ma
-              Chance, KaskasKaama, elle met aujourd’hui au cœur de son activité
-              le développement et la professionnalisation du groupe de musique
-              La Sépia pour lequel elle écrit des chansons qu’elle interprète
-              avec une petite bande de musiciens. Elle déroule à la Réunion avec
-              ce groupe, un concert intitulé Tapimandyan.
+              Cécile Fontaine est comédienne de formation (CRR, puis Estudis de
+              Teatre à Barcelone), elle écrit et chante des chansons aussi,
+              organise des collaborations variées avec des personnes issues du
+              monde artistique et d’autres qui viennent d’ailleurs.
             </p>
             <p>
-              Dans le prochain spectacle de la compagnie qui est en cours
-              d’écriture, se mêleront théâtre, musique et cuisine. Actuellement
-              en résidence en territoire scolaire, en tant que comédienne, elle
-              travaille avec une jeune auteure et pâtissière professionnelle
-              Loharano Mamy Rabenjamina. Cette phase d’écriture Abracadabra, je
-              crée ce que je dis va prendre plusieurs formes créatives et
-              participatives en 2023-2024 avant d’aboutir à une pièce pour une
-              comédienne-chanteuse et deux percussionnistes.
+              C’est une inspiration importante que la rencontre avec l’Autre.
+              Dans son travail artistique le récit authentique tient une bonne
+              place.
             </p>
             <p>
-              Parallèlement, elle se met au service du photographe Jean-Marc
-              Grenier en tant que chargée de production pour son Rant dann ron :
-              « Maloya la pa nou la fé ». L’exposition naîtra en novembre à
-              l’Artothèque du Département de la Réunion.
+              Elle est donc responsable des projets artistiques ET des actions
+              culturelles qui sont indissociables de la démarche de création ou
+              de diffusion des œuvres. Ces dernières années, elle cherche les
+              façons les plus diverses de laisser la place à l’échange. La
+              qualité du lien avec les publics est devenue le centre de son
+              attention. Comment être au plus près des publics, dans un rapport
+              engagé et sincère, pour savourer l’avant, le pendant,
+              l’après-représentation. C’est dans cette veine qu’elle apprécie de
+              porter à la scène les projets de Rouge Bakoly, dans une
+              quasi-autonomie, avec la certitude d’être considérée par ses
+              partenaires, à égalité. Être acteur d’un territoire nécessite la
+              confiance, pour pouvoir dérouler des actions pertinentes, justes.
             </p>
             <p>
-              Cécile Fontaine a d’abord eu un long parcours universitaire et des
-              expériences d’enseignement à l’étranger avant de choisir le
-              Théâtre. Elle a effectué sa formation de comédienne au CRR auprès
-              de Marion Coby puis elle est allée en Espagne, à Barcelone, dans
-              une école internationale Estudis de Teatre pour un apprentissage
-              du masque dans la lignée de celle de Jacques Lecoq.
+              Metteuse en scène de Chéri concentre-toi s’il-vous-plaît, de
+              Zanfandmoun, interprète dans Saady Ma Chance, dans KaskasKaama,
+              dans Tapimandyan de La Sépia, elle se met au service de la
+              proposition du photographe Jean-Marc Grenier (Rant dann ron ) en
+              tant que chargée de production.
             </p>
             <p>
-              Avant de créer ROUGE BAKOLY elle a eu de nombreuses aventures
-              théâtrales avec les compagnies réunionnaises (Théâtrenfance,
-              Sakidi, Cyclones production, Baba sifon…), avec les Bambous, le
-              Centre Dramatique National de l’Océan Indien, et le dernier
-              spectacle de théâtre auquel elle a participé en tant que
-              comédienne est la Conférence des Oiseaux avec le Centre Dramatique
-              National de Colmar en Alsace.
+              Elle fabrique et coordonne les résidences, les parcours, les
+              processus de création et de diffusion de la compagnie depuis 2014.
             </p>
           </article>
         </section>
@@ -169,15 +153,15 @@ function Services({ helmet }) {
               <p>
                 En privilégiant l’accès gratuit à la démarche de création, par
                 le biais d’ateliers de pratique, d’interconnaissance, de
-                participation directe diversifiée, de bord de scène, ronnkozé,
-                d’exposition photographique ou artisanales, ROUGE BAKOLY combat
-                l’isolement, l’ignorance, les préjugés, les peurs, les
-                inégalités. Elle tente de proposer des mises en valeur de toutes
-                les initiatives qu’elle rencontre, dans la conscience qu’en face
-                chacun est déjà riche d’une culture et d’expériences de vie. La
-                compagnie propose au-delà du divertissement et de la
-                consommation culturelle la possibilité de percevoir et d’activer
-                la joie du faire ensemble.
+                participation directe diversifiée, de bord de scène, de
+                ronnkozé, d’exposition photographique ou artisanales, ROUGE
+                BAKOLY combat l’isolement, l’ignorance, les préjugés, les peurs,
+                les inégalités. Elle tente de proposer des mises en valeur de
+                toutes les initiatives qu’elle rencontre sur le terrain, dans la
+                conscience qu’en face, chacun est déjà riche d’une culture et
+                d’expériences de vie. La compagnie propose au-delà du
+                divertissement et de la consommation culturelle la possibilité
+                de percevoir et d’activer la joie du faire ensemble.
               </p>
             </article>
             <img src={concert} alt="" />
@@ -185,9 +169,9 @@ function Services({ helmet }) {
         </section>
 
         <section className="benevoles">
-          <h2>ROUGE BAKOLY, SES BÉNÉVOLES</h2>
+          <h2>ROUGE BAKOLY, ses bénévoles</h2>
           <article>
-            <p>Rouge Bakoly est une association loi 1901 qui a pour objet:</p>
+            <p>Rouge Bakoly est une association loi 1901 qui a pour objet :</p>
             <p>
               • De promouvoir la culture, l’art et l’artisanat sous toutes ses
               formes <br /> • De produire et de diffuser toute œuvre artistique
@@ -206,12 +190,13 @@ function Services({ helmet }) {
             </p>
             <p>
               L’association est ouverte à toutes formes d’aides bénévoles
-              ponctuellement : qu’elles soient logistiques, organisationnelles,
-              administrative ou dans le domaine de la communication.
+              ponctuellement : en logistique, organisation d’événements,
+              administration, communication… Rejoignez-nous !
             </p>
             <p>
               Elle a aussi mis en place une plateforme de dons pour tous ceux
-              qui souhaiteraient contribuer à sa démarche financièrement.
+              qui souhaiteraient soutenir financièrement les projets de
+              création.
             </p>
           </article>
         </section>

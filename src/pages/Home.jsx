@@ -125,10 +125,10 @@ export default function Home({ helmet }) {
         <div>
           <h1>La compagnie Rouge Bakoly</h1>
           <p>
-            Ut eleifend, massa a rutrum tincidunt, justo tellus sollicitudin
-            leo, nec maximus enim erat a ex. Aenean rutrum dignissim convallis.
-            Pellentesque sem dolor, hendrerit sit amet porta non, sollicitudin
-            ut quam.
+            La démarche de travail de la compagnie ROUGE BAKOLY se nourrit d’une
+            mise en réseau partenariale et de rencontres pluridisciplinaires au
+            service d’un discours artistique qui traite de notre société
+            contemporaine.
           </p>
           <Link to="/Compagnie">
             <button type="button" className="button_style">
