@@ -22,28 +22,9 @@ function Tarifs({ helmet }) {
 
     let obj = {};
     const json = data2.map((line, index) => {
-      const photos = [];
-      const logos = [];
-      const personnes = [];
-      const roles = [];
-
       if (index > 0) {
         data2[0].forEach((key, j) => {
-          if (key.startsWith("photo")) {
-            photos.push(line[j]);
-          }
-          if (key.startsWith("logo")) {
-            logos.push(line[j]);
-          }
-          if (key.startsWith("personne")) {
-            personnes.push(line[j]);
-          }
-          if (key.startsWith("role")) {
-            roles.push(line[j]);
-          }
           obj = { ...obj, [key]: line[j] };
-
-          obj = { ...obj, photos, logos, personnes, roles };
         });
       }
       return obj;
@@ -120,16 +101,8 @@ function Tarifs({ helmet }) {
                 <h3>L'équipe</h3>
                 <div className="team">
                   <div>
-                    {action.roles &&
-                      action.roles
-                        .filter((tap) => tap !== "")
-                        .map((el) => <p>{el} :</p>)}
-                  </div>
-                  <div>
-                    {action.personnes &&
-                      action.personnes
-                        .filter((tap) => tap !== "")
-                        .map((el) => <p>{el}</p>)}
+                    {action.equipe &&
+                      action.equipe.split(";").map((el) => <p>{el} </p>)}
                   </div>
                 </div>
               </div>
@@ -142,7 +115,15 @@ function Tarifs({ helmet }) {
               <ResponsiveMasonry>
                 <Masonry gutter="2rem">
                   {action.photos &&
-                    action.photos.map((el) => <img src={el} alt="" />)}
+                    action.photos
+                      .replaceAll(".png", ".png ")
+                      .replaceAll(".jpg", ".jpg ")
+                      .replaceAll(".svg", ".svg ")
+                      .split(" ")
+                      .filter((el) => el !== "")
+                      .map((el) => (
+                        <img src={el} alt="photos décrivant le spectacle" />
+                      ))}
                 </Masonry>
               </ResponsiveMasonry>
             </div>
@@ -159,11 +140,16 @@ function Tarifs({ helmet }) {
             <section className="soutien">
               <h4>Avec le soutien de</h4>
               <div className="logo_container">
-                {action.logos
-                  .filter((el) => el !== "")
-                  .map((el) => (
-                    <img src={el} alt="" />
-                  ))}
+                {action.logos &&
+                  action.logos
+                    .replaceAll(".png", ".png ")
+                    .replaceAll(".jpg", ".jpg ")
+                    .replaceAll(".svg", ".svg ")
+                    .split(" ")
+                    .filter((el) => el !== "")
+                    .map((el) => (
+                      <img src={el} alt="photos décrivant le spectacle" />
+                    ))}
               </div>
             </section>
           )}
