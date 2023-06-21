@@ -18,7 +18,7 @@ function Services({ helmet }) {
       </Helmet>
       <main className="compagnie">
         <section className="bgA compagniebg">
-          <h1>Rouge Bakoly</h1>
+          <h1>ROUGE BAKOLY</h1>
           <p>Rouv lo zyé. Rouv lo kèr. Mèt ansanm.</p>
           <div className="veil" />
         </section>
