@@ -67,6 +67,7 @@ function Tarifs({ helmet }) {
           {allActions.length > 0 ? (
             allActions
               .filter((act) => act.nom && act.type.includes(actions))
+              .sort((a, b) => b.id - a.id)
               .map((el, index) => (
                 <Link to={`/actions/${actions}/${index}`}>
                   <div className="action_petit">
