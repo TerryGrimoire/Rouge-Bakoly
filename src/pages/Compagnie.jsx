@@ -18,7 +18,7 @@ function Services({ helmet }) {
       </Helmet>
       <main className="compagnie">
         <section className="bgA compagniebg">
-          <h1>ROUGE BAKOLY</h1>
+          <h2>ROUGE BAKOLY</h2>
           <p>Rouv lo zyé. Rouv lo kèr. Mèt ansanm.</p>
           <div className="veil" />
         </section>
@@ -77,9 +77,8 @@ function Services({ helmet }) {
             <article>
               <h3>CÉCILE FONTAINE</h3>
               <p>
-                Au fil des projets Cécile Fontaine s’est affirmée comme
-                responsable des projets artistiques et des actions culturelles
-                de la compagnie ROUGE BAKOLY.
+                Cécile Fontaine, responsable des projets artistiques et des
+                actions culturelles de la compagnie ROUGE BAKOLY.
               </p>
             </article>
             <img src={cecile} alt="" />
@@ -89,7 +88,7 @@ function Services({ helmet }) {
               Cécile Fontaine est comédienne de formation (CRR, puis Estudis de
               Teatre à Barcelone), elle écrit et chante des chansons aussi,
               organise des collaborations variées avec des personnes issues du
-              monde artistique et d’autres qui viennent d’ailleurs.
+              monde artistique et d’horizons différents.
             </p>
             <p>
               C’est une inspiration importante que la rencontre avec l’Autre.

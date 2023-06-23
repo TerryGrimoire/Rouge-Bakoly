@@ -59,7 +59,7 @@ function Tarifs({ helmet }) {
       </Helmet>
       <main>
         <section className={actionMain.background}>
-          <h1>{actionMain.title.toUpperCase()}</h1>
+          <h2>{actionMain.title.toUpperCase()}</h2>
           <p>{actionMain.text}</p>
           <div className="veil" />
         </section>

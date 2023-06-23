@@ -22,6 +22,24 @@ export default function Home({ helmet }) {
   const [lastCreation, setLastCreation] = useState([]);
   const [actu, setActu] = useState([]);
   const [number, setNumber] = useState(0);
+  const [voir, setVoir] = useState("VOIR TOUTES NOS CRÉATIONS");
+
+  const MakeVoir = () => {
+    if (lastCreation.type) {
+      switch (lastCreation.type) {
+        case "Spectacles":
+          setVoir("VOIR TOUS NOS SPÉCTACLES");
+          break;
+        case "Residences":
+          setVoir("VOIR TOUTES NOS RÉSIDENCES");
+          break;
+        case "Pluridisciplinarite":
+          setVoir("VOIR TOUTES NOS AUTRES PRODUCTIONS");
+          break;
+        default:
+      }
+    }
+  };
 
   const prepareData2 = (data2) => {
     // j correspond aux lignes de A à ZZZ sur fichier Excel
@@ -42,9 +60,7 @@ export default function Home({ helmet }) {
 
     json.shift();
     sessionStorage.setItem("data", JSON.stringify([...new Set(json)]));
-    setLastCreation(
-      [...new Set(json)].filter((el) => el.type === "Spectacles")[0]
-    );
+    setLastCreation([...new Set(json)][json.length - 1]);
   };
 
   useEffect(() => {
@@ -86,7 +102,7 @@ export default function Home({ helmet }) {
   const handleDragStart = (e) => e.preventDefault();
 
   const items = itemData.map((el) => (
-    <section className="landing" onDragStart={handleDragStart}>
+    <section className="landing" onDragStart={handleDragStart} key={el.title}>
       <div className={el.src} />
       <div className="landing_description">
         <h3>{el.title.toUpperCase()}</h3>
@@ -99,6 +115,10 @@ export default function Home({ helmet }) {
       </div>
     </section>
   ));
+
+  useEffect(() => {
+    MakeVoir();
+  }, [lastCreation]);
 
   return (
     <main className="flex-col align-center justify-center">
@@ -151,9 +171,9 @@ export default function Home({ helmet }) {
                   lastCreation.description.substring(0, 260)}
                 ...
               </p>
-              <Link to="/actions/Spectacles">
+              <Link to={`/actions/${lastCreation.type}`}>
                 <button type="button" className="button_style2">
-                  VOIR TOUS NOS SPECTACLES
+                  {voir}
                 </button>
               </Link>
             </article>
@@ -176,7 +196,7 @@ export default function Home({ helmet }) {
 
               <p>
                 {actu[number].texte.split("//").map((el) => (
-                  <span> {el} </span>
+                  <span key={el}> {el} </span>
                 ))}
               </p>
             </article>
@@ -243,12 +263,10 @@ export default function Home({ helmet }) {
         </div>
       </section>
       <section className="aussis">
-        <h2>
-          Rouge Bakoly, <br /> c'est aussi
-        </h2>
+        <h2>Rouge Bakoly, c'est aussi</h2>
         <div className="aussi_container">
           {aussiData.map((el) => (
-            <div className="aussi">
+            <div className="aussi" key={el.title}>
               <article>
                 <h3>{el.title}</h3>
                 <p>{el.text}</p>

@@ -21,7 +21,7 @@ const aussi = [
   },
   {
     id: 2,
-    title: "RANT DANN RON",
+    title: "AUTRES PRODUCTIONS",
     text: "Après sa Résidence Patrimoine et Création au Musée de Villèle avec le Département, Jean-Marc Grenier présente une nouvelle étape de son travail sur le maloya, à l’Artothèque dès le 1er décembre 2023. Rant dann ron : Maloya la pa nou la fé une production de Rouge Bakoly avec le soutien du Département, de la Région Réunion, de la Ville de Saint-Denis.",
     src: ron,
     alt: "",
