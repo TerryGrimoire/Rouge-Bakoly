@@ -43,9 +43,11 @@ function Tarifs({ helmet }) {
   }, []);
 
   const action = allActions.filter(
-    (act) => act.type && act.type.includes(actions)
-  )[id];
-
+    (act) =>
+      act.type &&
+      act.type.includes(actions) &&
+      act.nom.includes(id.replaceAll("_", " "))
+  )[0];
   return (
     <div className="action">
       <Helmet>

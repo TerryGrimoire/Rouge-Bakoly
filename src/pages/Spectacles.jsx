@@ -68,8 +68,8 @@ function Tarifs({ helmet }) {
             allActions
               .filter((act) => act.nom && act.type.includes(actions))
               .sort((a, b) => b.id - a.id)
-              .map((el, index) => (
-                <Link to={`/actions/${actions}/${index}`}>
+              .map((el) => (
+                <Link to={`/actions/${actions}/${el.nom.replaceAll(" ", "_")}`}>
                   <div className="action_petit">
                     <img src={el.image} alt={el.nom} />
                     <div className="action_petit_text">
