@@ -31,7 +31,6 @@ function Tarifs({ helmet }) {
     });
 
     json.shift();
-    sessionStorage.setItem("data", JSON.stringify([...new Set(json)]));
     setAllActions([...new Set(json)]);
   };
 
@@ -48,6 +47,13 @@ function Tarifs({ helmet }) {
       act.type.includes(actions) &&
       act.nom.includes(id.replaceAll("_", " "))
   )[0];
+
+  const filteredActions = allActions.filter(
+    (act) => act.type && act.type.includes(actions)
+  );
+
+  const indexx = filteredActions.indexOf(action);
+
   return (
     <div className="action">
       <Helmet>
@@ -63,17 +69,22 @@ function Tarifs({ helmet }) {
       {action ? (
         <main>
           <div className="top_bar">
-            {parseInt(id, 10) !== 0 && (
-              <Link to={`/actions/${actions}/${parseInt(id, 10) - 1}`}>
+            {parseInt(indexx, 10) < filteredActions.length - 1 && (
+              <Link
+                to={`/actions/${actions}/${filteredActions[
+                  indexx + 1
+                ].nom.replaceAll(" ", "_")}`}
+              >
                 Précédent
               </Link>
             )}
             <Link to={`/actions/${actions}`}> Revenir au sommaire </Link>
-            {parseInt(id, 10) <
-              allActions.filter((act) => act.type && act.type.includes(actions))
-                .length -
-                1 && (
-              <Link to={`/actions/${actions}/${parseInt(id, 10) + 1}`}>
+            {parseInt(indexx, 10) > 0 && (
+              <Link
+                to={`/actions/${actions}/${filteredActions[
+                  indexx - 1
+                ].nom.replaceAll(" ", "_")}`}
+              >
                 {" "}
                 Suivant{" "}
               </Link>
