@@ -256,7 +256,11 @@ export default function Home({ helmet }) {
             >
               <img src={youtube} alt="Logo Youtube" />
             </a>
-            <a href="/" target="_blank" rel="noreferrer">
+            <a
+              href="https://open.spotify.com/show/2I0VNJaYZVkP3Cqp5FLsXv"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src={spotify} alt="Logo Spotify" />
             </a>
           </div>
