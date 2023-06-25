@@ -1,5 +1,5 @@
-import residence from "../assets/residences_longues.jpg";
-import production from "../assets/production_phonographique.jpg";
+import residence from "../assets/residences_longues_part.jpg";
+import production from "../assets/phono.jpg";
 import ron from "../assets/rant_dann_ron.jpg";
 
 const aussi = [
@@ -22,10 +22,10 @@ const aussi = [
   {
     id: 2,
     title: "AUTRES PRODUCTIONS",
-    text: "Après sa Résidence Patrimoine et Création au Musée de Villèle avec le Département, Jean-Marc Grenier présente une nouvelle étape de son travail sur le maloya, à l’Artothèque dès le 1er décembre 2023. Rant dann ron : Maloya la pa nou la fé une production de Rouge Bakoly avec le soutien du Département, de la Région Réunion, de la Ville de Saint-Denis.",
+    text: "Rouge Bakoly ne fait pas seulement du spectacle vivant, notre compagnie a des facettes multiples: arts visuels, exposition, podcast, artisanat végétal, pâtisserie et écriture, vidéogrammes, édition... nous produisons dans les champs disciplinaires les plus divers.",
     src: ron,
     alt: "",
-    lien: "/actions/Pluridisciplinarite/0",
+    lien: "/actions/Pluridisciplinarite",
   },
 ];
 export default aussi;

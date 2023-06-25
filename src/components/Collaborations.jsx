@@ -60,10 +60,7 @@ function Collaborations() {
       {collab && collab.length > 0 ? (
         <section className="collaborations">
           <h2>COLLABORATIONS</h2>
-          <p>
-            Aliquam tincidunt vel nibh et suscipit. Integer laoreet egestas
-            tempor. Donec vehicula eros a nisi consectetur hendrerit et at arcu.
-          </p>
+          <p>Gayar lantouraz i fé nout kalité.</p>
           <div>
             <AliceCarousel
               mouseTracking

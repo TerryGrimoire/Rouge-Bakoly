@@ -259,7 +259,8 @@ header {
 }
 
 .num3 {
-  background-image: url(./assets/autres.jpg);
+  background-image: url(./assets/nosproductions.jpg);
+  background-position: 60% 50%;
 }
 
 .alice-carousel__dots {
@@ -649,7 +650,7 @@ width: 95vw;
 /********************************************************************* ACTIONS *********************************************************************/ 
 
 .bgA {
-  height: 40vh;
+  height: 45vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

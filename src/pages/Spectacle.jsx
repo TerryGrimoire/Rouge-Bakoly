@@ -91,24 +91,36 @@ function Tarifs({ helmet }) {
             </div>
           </section>
           <section className="text_container">
-            <p className="text description">{action.description}</p>
+            {action.description && (
+              <p className="text description">{action.description}</p>
+            )}
             <div className="bloc_culturel">
-              <article className="text">
-                <h3>L'action culturelle</h3>
-                <p>{action.action_culturelle}</p>
-              </article>
-              <div className="text">
-                <h3>L'équipe</h3>
-                <div className="team">
-                  <div>
-                    {action.equipe &&
-                      action.equipe.split(";").map((el) => <p>{el} </p>)}
+              {action.action_culturelle && (
+                <article className="text">
+                  <h3>L'action culturelle</h3>
+                  <p>{action.action_culturelle}</p>
+                </article>
+              )}
+              {action.equipe && (
+                <div className="text">
+                  <h3>L'équipe</h3>
+                  <div className="team">
+                    <div>
+                      {action.equipe &&
+                        action.equipe.split(";").map((el) => <p>{el} </p>)}
+                    </div>
                   </div>
                 </div>
-              </div>
+              )}
             </div>
           </section>
-          <iframe src={action.video} frameBorder="0" title="video du projet" />
+          {actions.video && (
+            <iframe
+              src={action.video}
+              frameBorder="0"
+              title="video du projet"
+            />
+          )}
           <section className="galerie">
             <h3>GALERIE PHOTOS</h3>
             <div>
