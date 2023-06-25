@@ -709,7 +709,7 @@ width: 95vw;
   flex-direction: column;
   justify-content: flex-start;
   align-items:flex-start;
-  margin: 0.5rem 0.25rem;
+  margin: 0.25rem 0.25rem;
   padding: 0.1rem;
   background-color: var(--secondary-bg-color);
   color: var(--main-bg-color);
@@ -735,7 +735,7 @@ width: 95vw;
   top: -1rem;
   z-index: 2;
   background-color: var(--third-color);
-  padding: 0 0.25rem;
+  padding: 0 0.5rem;
 }
 
 /********************************************************************* ACTION BY ID *********************************************************************/ 
@@ -943,11 +943,12 @@ footer a:hover {
  .collaborations > div {
   max-width: 100%;
   margin-left: 5vw;
-  margin-top: 2rem;
+  margin-top: 5rem;
  }
 
  .collaborations h2, .collaborations p {
   text-align: center;
+  margin: 1rem 0;
  }
 
  .collaborations img {
@@ -1483,11 +1484,15 @@ width: 100vw;
   background-color: var(--secondary-bg-color);
 }
 
-.bgA p, .bgA h1 {
+.bgA p, .bgA h2 {
   z-index: 2;
   padding: 0.5rem;
   width: 90%;
   text-align: center;
+}
+
+.bgA h2 {
+  font-size: 2.5rem;
 }
 
 .compagnie {
