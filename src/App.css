@@ -550,11 +550,12 @@ width: 95vw;
   align-items: center;
 }
 
-.presentation h2 {
+.compagnie h2 {
   text-align: left;
   width: 100%;
   max-width: var(--max1);
   width: 80vw;
+  margin: 1rem 0;
 }
 .presentation .definition {
   max-width: var(--max1);
@@ -975,7 +976,7 @@ footer a:hover {
 .collaboration {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   max-width: var(--max2);
   padding: 4rem 0 2rem;
 }
