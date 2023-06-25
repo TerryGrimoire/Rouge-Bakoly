@@ -28,7 +28,7 @@ export default function Home({ helmet }) {
     if (lastCreation.type) {
       switch (lastCreation.type) {
         case "Spectacles":
-          setVoir("VOIR TOUS NOS SPÉCTACLES");
+          setVoir("VOIR TOUS NOS SPECTACLES");
           break;
         case "Residences":
           setVoir("VOIR TOUTES NOS RÉSIDENCES");
