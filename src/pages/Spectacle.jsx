@@ -146,9 +146,7 @@ function Tarifs({ helmet }) {
                       .replaceAll(".svg", ".svg ")
                       .split(" ")
                       .filter((el) => el !== "")
-                      .map((el) => (
-                        <img src={el} alt="photos décrivant le spectacle" />
-                      ))}
+                      .map((el) => <img src={el} alt={el} />)}
                 </Masonry>
               </ResponsiveMasonry>
             </div>
@@ -171,10 +169,8 @@ function Tarifs({ helmet }) {
                     .replaceAll(".jpg", ".jpg ")
                     .replaceAll(".svg", ".svg ")
                     .split(" ")
-                    .filter((el) => el !== "")
-                    .map((el) => (
-                      <img src={el} alt="photos décrivant le spectacle" />
-                    ))}
+                    .filter((el) => el !== " " && el !== "")
+                    .map((el) => <img src={el} alt={el} />)}
               </div>
             </section>
           )}
