@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Header from "./components/Header/Header";
@@ -20,6 +21,9 @@ function App() {
     href: "https://rougebakoly.re",
     description: "Change description",
   };
+
+  const [bandeau, setBandeau] = useState(true);
+
   return (
     <HelmetProvider>
       <BrowserRouter>
@@ -47,6 +51,34 @@ function App() {
           <Route path="/Contact" element={<Contact helmet={helmet} />} />
           <Route path="/Mentions" element={<Mentions />} />
         </Routes>
+        {bandeau && (
+          <div className="bandeau">
+            <h2>Cookie</h2>
+            <p>
+              Ce site est à usage informatif et n'utilise donc pas de cookie.
+              Nous ne collectons aucune donnée personnelle. Pour en savoir plus,
+              consultez notre{" "}
+              <a href="/mentions">politique de confidentialité</a>
+            </p>
+
+            <div>
+              <button
+                type="button"
+                className="button_style2"
+                onClick={() => setBandeau(false)}
+              >
+                Tout accepter
+              </button>
+              <button
+                type="button"
+                className="button_style"
+                onClick={() => setBandeau(false)}
+              >
+                Tout refuser
+              </button>
+            </div>
+          </div>
+        )}
         <Footer />
       </BrowserRouter>
     </HelmetProvider>

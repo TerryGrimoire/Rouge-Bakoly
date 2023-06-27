@@ -1030,7 +1030,49 @@ footer a:hover {
 .error h1 {
   font-size: 10rem;
 }
+.bandeau {
+  position: fixed;
+  background-color: var(--main-bg-color);
+  bottom: 0.25rem;
+  left: 0.25rem;
+  width: 35%;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding: 0 1rem 1rem;
+  z-index: 999;
+  animation: appear 2s ease-in-out;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
 
+.bandeau div {
+  display: flex;
+  width: 100%;
+}
+.bandeau h2 {
+text-align: left;
+font-size: 1.5rem;
+margin: 0;
+padding: 0;
+width: 100%;
+}
+.bandeau p {
+  font-size: 0.85rem;
+  margin: 0 0 0.5rem;
+}
+.bandeau button { margin-right: 0.5rem;}
+@keyframes appear {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
 
 /******************************************************************************************************************************************/ 
 /******************************************************************************************************************************************/ 
@@ -1049,6 +1091,35 @@ footer a:hover {
 .mobile {
   display: initial;
 }
+
+.bandeau {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding: 1rem;
+  z-index: 999;
+  animation: appear 2s ease-in-out;
+  width: 99vw;
+}
+
+.bandeau div {
+  display: flex;
+  width: 100%;
+}
+@keyframes appear {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
 /********************************************************************* NAV *********************************************************************/ 
 header {
   display: flex;
