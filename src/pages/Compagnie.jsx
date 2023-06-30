@@ -66,7 +66,7 @@ function Services({ helmet }) {
               </p>
               <p>
                 -l’envie de créer un espace où des artistes de disciplines
-                différentes fabriquent ensemble et rencontre une diversité de
+                différentes fabriquent ensemble et rencontrent une diversité de
                 publics
               </p>
             </article>
@@ -85,10 +85,9 @@ function Services({ helmet }) {
           </div>
           <article className="article_cecile">
             <p>
-              Cécile Fontaine est comédienne de formation (CRR, puis Estudis de
-              Teatre à Barcelone), elle écrit et chante des chansons aussi,
-              organise des collaborations variées avec des personnes issues du
-              monde artistique et d’horizons différents.
+              Cécile Fontaine est comédienne de formation, elle écrit et chante
+              des chansons aussi, organise des collaborations variées avec des
+              personnes issues du monde artistique et d’horizons différents.
             </p>
             <p>
               C’est une inspiration importante que la rencontre avec l’Autre.
