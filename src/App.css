@@ -5,7 +5,7 @@
   --main-bg-color : #FFFFFF;
   --secondary-bg-color : #101010;
   --third-color : #e3822f;
-  --button-color: #0055FF;
+  --button-color: #0055FF; 
   --box-shadow: #e1e1e1 0px 1px 0px, #e1e1e1 0px 4px 16px, #e1e1e1 0px 8px 16px;
   --font-title : 'Jost', sans-serif;
   --font-text :'Hind', sans-serif;
@@ -1259,9 +1259,9 @@ header {
   background-size:cover;
 }
 
+
 .num1 {
-  background-image: url(./assets/landing.png);
-  background-position: right;
+  background-image: url(./assets/residences_home.jpg);
 
 }
 
@@ -1270,8 +1270,8 @@ header {
 }
 
 .num3 {
-  background-image: url(./assets/autres.jpg);
-  background-position: right;
+  background-image: url(./assets/nosproductions.jpg);
+  background-position: 60% 50%;
 }
 
 .alice-carousel__dots {

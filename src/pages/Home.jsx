@@ -195,9 +195,10 @@ export default function Home({ helmet }) {
               <h4>{actu[number].titre}</h4>
 
               <p>
-                {actu[number].texte.split("//").map((el) => (
-                  <span key={el}> {el} </span>
-                ))}
+                {actu[number].texte &&
+                  actu[number].texte
+                    .split("//")
+                    .map((el) => <span key={el}> {el} </span>)}
               </p>
             </article>
             <div className="buttons_container">

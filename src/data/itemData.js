@@ -13,7 +13,6 @@ const data = [
     text: "Rouge Bakoly a pour activité principale la production de spectacle vivant. Nous diffusons en salle et en dehors des salles, dans des lieux inédits. Depuis la mise en place du Pass Culture, nous donnons aussi des représentations en milieu scolaire.",
     button: "Voir les spectacles",
     lien: "/actions/Spectacles",
-
     src: "background num2",
   },
   {
